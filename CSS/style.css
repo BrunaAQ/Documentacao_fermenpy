@@ -1,0 +1,611 @@
+
+
+body {
+    background: #B9F7C0;
+}
+
+h2 {
+    font-family: ar cena; 
+}
+h3 {
+    font-family: ar cena;
+}
+
+
+h4 {
+    font-family:  Geneva;
+}
+
+
+p {
+    font-family: arial narrow;
+    font-size: 18px;
+}
+
+
+.menu ul li {
+    background-color: #F8F9F9;
+    color: black;
+    float: left;
+    width: 200px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px; 
+    position: relative;
+}
+
+.menu ul li:hover {
+    background-color: #CCD1D1;    
+}
+
+.menu ul {
+    padding: 0;   
+}
+.menu ul ul {
+    display: none;
+}
+.menu ul li:hover > ul{
+    display: block;
+}
+.menu ul ul ul{
+    margin-left: 201px;
+    top: 0;
+    position: absolute;
+}
+
+.menu ul ul li:hover{
+    background-color: #CCD1D1;
+}
+
+.ag {
+    margin-left: 20px;
+    background-color :rgb(150, 248, 193);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+}
+
+.alm {
+    margin-left: 20px;
+    background-color : #82E0AA;
+    margin-left: 20px;
+    background-color :rgb(150, 248, 193);
+}
+
+.calibracao h5{
+    font-size: 15px;
+}
+.ag h5{
+    font-size: 15px;
+}
+.alm h5{
+    font-size: 15px;
+}
+
+.calibracao {
+    margin-left: 20px;
+    background-color :rgb(150, 248, 193);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+}
+
+.ausencia h3 {
+    color:#766E6B;
+}
+
+.substrato h3{
+    color: #766E6B; 
+}
+.produto h3{
+    color: #766E6B; 
+}
+.biomassa h3{
+    color: #766E6B;
+}
+.integracao h3{
+    color: #766E6B;
+}
+.regressao h3{
+    color: #766E6B;
+}
+
+.ausencia h4 {
+    font-size: 18px;
+}
+.substrato h4 {
+    font-size: 18px; 
+}
+.produto h4 {
+    font-size: 18px; 
+}
+.biomassa h4 {
+    font-size: 18px; 
+}
+.linear h4 {
+    font-size: 18px; 
+}
+.nao linear h4 {
+    font-size: 18px; 
+}
+.balancocx h4{
+    font-size: 18px; 
+}
+.balancocs h4{
+    font-size: 18px; 
+}
+.balancocp h4{
+    font-size: 18px; 
+}
+
+.ausencia{
+    margin-left: 20px;
+    background-color : #82E0AA;
+}
+.balancocx {
+    margin-left: 20px;
+}
+.balancocs {
+    margin-left: 20px;
+}
+.balancocp {
+    margin-left: 20px;
+}
+.substrato {
+    margin-left: 20px;
+    background-color : #82E0AA;
+    
+} 
+.produto {
+    margin-left: 20px;
+    background-color : #82E0AA;
+}
+.biomassa {
+    margin-left: 20px;
+    background-color : #82E0AA;
+}
+.integracao {
+    margin-left: 20px;
+    background-color : #82E0AA;
+}
+.regressao {
+    margin-left: 20px;
+    background-color : #82E0AA;
+}
+.linear {
+    margin-left: 20px;
+    background-color : #82E0AA;
+}
+
+.quemsomos{
+    background-color:  rgb(29, 145, 223);
+    color:white;
+}
+.pesquisa{
+    background-color: rgb(121, 123, 126) ;
+    color: white;
+}
+
+
+
+.cabecalho {
+    background-color: #6AE146;
+}
+
+.documentacao{
+    color: white;
+    background-color: #27AE60;
+}
+
+.batelada{
+    background-color: #B9F7C0;;
+}
+
+
+.modelos {
+    background-color : #B9F7C0;;
+}
+
+.contatos{
+    color: white;
+    background-color:#E74C3C;
+}
+.referencias {
+    color:white;
+    background-color: #AC58FA;
+}
+
+.rodape{
+    background-color: #273746;
+    color: white;
+    margin-top: 100px;
+    height: 280px;
+}
+
+.margin{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    
+}
+.marginlinear{
+    padding-top: 0px;
+    padding-bottom: 1px;    
+}
+.margincalibracao{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.marginregressao{
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+.marginbalancocx {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.marginbalancocs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.marginbalancocp {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.rodape h6{
+    color:black;
+    text-align: right;
+}
+
+.bordercabecalho {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+}
+.borderquemsomos {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+}
+.borderpesquisa {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+}
+.borderdocumentacao {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+}
+.borderbatelada {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+}
+.borderausencia {
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.bordersubstrato {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderproduto {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderbiomassa {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderintegracao {
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderregressao {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderlinear {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.bordercalibracao {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.bordernaolinear {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderag {
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderalm {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+
+.bordercontatos {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+}
+.borderrodape {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+}
+
+.email{
+    color:black;
+}
+.formulas{
+    font-size: 18px;
+    color:black;
+    background-color: rgb(174, 211, 174);
+    width: 700px;
+    margin-left: 175px;
+    padding-top:20px;
+    padding-bottom:10px;
+
+}
+.formulas p{
+    color: black;
+    font-size:12px;
+    font-family: georgia;
+}
+
+.borderformula {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+}
+
+.borderreferencias {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+}
+
+.balancomassa{
+    margin-left: 20px;
+    background-color: #82E0AA;
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.balancocx {
+    margin-left: 20px;
+    background-color: rgb(150, 248, 193);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.balancocs {
+    margin-left: 20px;
+    background-color: rgb(150, 248, 193);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.balancocp {
+    margin-left: 20px;
+    background-color: rgb(150, 248, 193);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+
+
+.balancomassa h3{
+    color: #766E6B;
+}
+.legenda p{
+    font-size: 14px;
+}
+.borderequacaoregressao{
+    width: 600px;
+    background-color: rgb(174, 211, 174);
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: white;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: white;
+}
+.borderimgcrescimento{
+    width: 533px;
+    height: 348px;
+    background-color: white;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+}
+.borderimgmoser{
+    width: 555px;
+    height: 395px;
+    background-color: white;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+}
+.borderimgmi{
+    width: 585px;
+    height: 365px;
+    background-color: white;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+}
+
+.formulasfinais {
+    background-color: rgb(243, 51, 51);
+}
+.borderformulasfinais {
+    width: 240px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+}
+.borderformulasfinaismaiores {
+    width: 400px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+}
+
