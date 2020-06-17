@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html - lang-"pt-br">
+    <head>
+        <meta charset = "utf-8">
+        <link  rel = "stylesheet" type = "text/css" href = "bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link  rel = "stylesheet" type = "text/css" href = "CSS/style.css">
+        <title>
+        FermenPy
+        </title>
+    </head>
+    
+    <body>
+        
+
+        <header>
+            <div class = "container-fluid cabecalho text-center margin bordercabecalho">
+                <h2>
+                    SIMULAÇÃO E MODELAGEM DE PROCESSOS FERMENTATIVOS MICROBIANOS
+                </h2>
+            </div>
+        </header>
+        
+        <nav class = "menu">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.jpeg" width="45" height="60">
+                </a>
+                <div class = "collapse navbar-collapse">
+                    <ul class = "navbar-nav">
+
+                        <li class = "nav-item"> 
+                            <a class = "nav-link active" href = "#quem somos"> QUEM SOMOS </a> </li>
+                        <li class = "nav-item"> 
+                            <a class = "nav-link active" href = "#nossa pesquisa"> NOSSA PESQUISA </a> </li>
+                        <li class = "nav-item"> 
+                            <a class = "nav-link active" href = "#documentacao"> DOCUMENTAÇÃO  </a> 
+                            <ul>
+                                <li class = "nav-item"> 
+                                    <a class = "nav-link active" href = "#batelada"> BATELADA </a> 
+                                    <ul>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#balanco massa"> BALANÇO DE MASSA </a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class = "nav-item"> 
+                                    <a class = "nav-link active" href = "#modelos cineticos"> MODELOS CINÉTICOS </a> 
+                                    <ul>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#ausencia inibicao"> AUSÊNCIA DE INIBIÇÃO </a> </li>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#inibicao substrato">INIBIÇÃO POR SUBSTRATO </a> </li>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#inibicao produto"> INIBIÇÃO POR PRODUTO </a> </li>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#inibicao biomassa"> INIBIÇÃO POR BIOMASSA </a> </li>
+                                    </ul>
+                                </li>
+                                <li class ="nav-item"> 
+                                    <a class = "nav-link active" href = "#algoritmos"> ALGORITMOS </a>
+                                    <ul>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#integracao numerica"> INTEGRAÇÃO NUMÉRICA </a> </li>
+                                        <li class ="nav-item"> 
+                                            <a class = "nav-link active" href = "#regressao"> REGRESSÃO </a>
+                                            <ul>
+                                                <li class ="nav-item"> 
+                                                    <a class = "nav-link active" href = "#linear"> LINEAR </a>
+                                                    <ul>
+                                                        <li class ="nav-item active"> 
+                                                            <a class = "nav-link" href = "#calibracao"> CALIBRAÇÃO </a> </li>
+                                                    </ul>
+                                                </li>
+                                       
+                                                <li class ="nav-item active">  
+                                                    <a class = "nav-link" href = "#nao linear"> NÃO LINEAR </a>
+                                                    <ul>
+                                                        <li class ="nav-item active"> 
+                                                            <a class = "nav-link" href = "#AG"> ALGORITMO GENÉTICO </a> </li>
+                                                        <li class ="nav-item active"> 
+                                                            <a class = "nav-link" href = "#ALM"> ALGORITMO LM </a> </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class = "nav-item">
+                                    <a class = "nav-link active" href = "#referencias"> BIBLIOGRAFIA </a> </li>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class ="nav-item active"> <a class = "nav-link" href = "tutorial.html"> TUTORIAIS </a> </li>
+                        <li class ="nav-item active"> <a class = "nav-link" href = "covid.html"> ADICIONAIS </a> </li>
+                        <li class ="nav-item active"> <a class = "nav-link" href = "#contatos"> CONTATOS </a> </li>
+                       
+                    </ul>
+                
+                
+                </div>
+            </nav>  
+        </nav>
+    
+    
+        <section id="quem somos">
+            <div class = "container-fluid quemsomos text-rigth margin borderquemsomos">
+                <h2> QUEM SOMOS </h2>
+                <p>
+                    O grupo FermenPy é formando por alunos graduandos do curso de Engenharia de Bioprocessos e 
+                    Biotecnologia (DEBB),
+                    oferecido pelo Departamento de Engenharia de Bioprocessos e Biotecnologia, o qual está
+                    vinculado à Faculdade de Ciências Farmacêuticas de Araraquara, um dos campi da Universidade
+                    Estadual Paulista "Júlio de Mesquita Filho", UNESP e conta com a orientação e participação 
+                    direta do Professor Doutor Marcel Otávio Cerri, docente na mesma instituição e responsável por 
+                    várias disciplinas do referido curso. Uma delas, a de <i> Processos Fermentativos Microbianos </i>
+                    forneceu as bases e motivações para a criação do time e desenvolvimento do projeto.
+                    Ainda, a equipe conta com a coorientação do Professor Doutor Marcelo Perencin de Arruda 
+                    Ribeiro, docente do Departamento de Engenharia Química da Universidade 
+                    Federal de São Carlos, tendo sua linha de pesquisa voltada para a modelagem de processos químicos.
+                </p>
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-lg-4">
+                            <img src = "img/perfil.jpg" class = "rounded-circle" width = 180px height = 210px>   
+                        </div>
+                    </div>
+                </div>
+                <a href = "https://www.facebook.com/profile.php?id=100006425151981" target = "_blank">
+                    <img src = "img/logo_facebook.jpg" width = 30px>
+                </a>
+                <a href = "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2753494Z0&tokenCaptchar=03AGdBq27oCMpv9XcoK5ST57enDeHhXYY30dI17ucwpflPvUrvikQ8Zoo2bYOIkFZafUdIQ_Gvyc2U6U8zHtBIueyOB1x6oScgVsmzIjDv-x_0Rhgv64I1Cq0hy0GqeiYYCGBCqXZVZFBBZRTybG5Ts840gqVrMTThRJeRMzdg1c-JGjDz_PF3ol23KCkMkKyH7oSSSbqO_Npue8MVhMiT8YrWZT0bNvF6vuSlvRzHV52O3oyfW5-3AfNmydnn4pDzL-r2f7aMQm-jMdiKIzP1JNPWuVIPVH3BSsI-cBNrzfS4Inn6RSeaClBYKxV3QBTYFSAWEkrxQPyHx0QAFi6lbsDy9xsvRYlulcb9u-HjWoFwMXDEehHbu0OiIZFbEBoOvnJJOwbEFNiTXDK48Vyzbs7TOGeawzBLUg" target = "_blank">
+                    <img src = "img/logo_lattes.png" width = 50px>
+                </a>   
+                <a href = "https://github.com/BrunaAQ" target = "_blank">
+                    <img src = "img/github.jpg" width = 43px>
+                </a> 
+            </div>
+        </section>
+        
+        <section id="nossa pesquisa">
+            <div class = "container-fluid pesquisa text-rigth margin borderpesquisa">
+                <h2> NOSSA PESQUISA </h2>
+                <p>
+                    Nosso projeto científico, financiado pela agência de fomento FAPESP (Fundação de Amparo à 
+                    Pesquisa do Estado de São Paulo), tem como foco central o desenvolvimento de algoritmos 
+                    integralmente em linguagem Python, com o intuito de, através do desenvolvimento
+                    de interfaces gáficas (GUIs) e, futuramente de plataformas <i>on-line</i> disponiblizar, 
+                    de maneira facilitada, clara, dinâmica e didática, 
+                    resoluções matemáticas aos problemas de engenharia intrínsecos
+                    aos eventos bioquímicos de fermentação microbiana conduzidos sob diferentes configurações 
+                    operacionais, sendo eles batelada, batelada alimentada e contínuo.
+                </p>
+                <p>
+                    A ideia inicial para a criação da nossa pesquisa partiu da proposta de, através da 
+                    aplicação de uma linguagem de programação que aliasse grande poder científico,
+                    matemático, gráfico e computacional, com uma relativa simplicidade sintática frente a outras
+                    amplamente empregadas para a resolução de problemas de minimização envolvendo equações não
+                    lineares, facilitar tanto o processo de tratamento de dados experimentados em cultivos reais 
+                    quanto o de aprendizagem dos alunos de graduação que se vêem comprometidos com disciplinas relacionadas
+                    a processos fermentativos microbianos, aliando conhecimento e tecnologia.
+                </p>
+                <p>
+                    Diante desse cenário, selamos nosso compromisso em compartilhar o saber acadêmico 
+                    adquirido no ambiente da universidade, através da busca de ferramentas facilitadoras
+                    para o processo de ensino dentro do cerne dos bioprocessos, a biotransformação por
+                    fermentação, disponibilizando informações teóricas e práticas (disponibilização dos
+                    algoritmos desenvolvidos) acerca do assunto.
+                </p>
+            </div>
+        </section>
+        
+        <section id="documentacao">
+            <div class = "container-fluid documentacao text-rigth margin borderdocumentacao">
+                <h2> DOCUMENTAÇÃO </h2>
+                <p>
+                Todo o desenvolvimento prático do projeto FermenPy encontra-se fortemente alicercado em comprovações e 
+                estudos cientícos, os quais são aplicados não apenas para fins de validação dos nossos algoritmos projetados, como
+                também para o completo e adequado fornecimento de conhecimento acerca do comportamento característico e verídico
+                dos processos fermentativos microbianos. Diante desse cenário, disponibilizamos nessa seção todas as informações
+                utilizadas por nosso grupo para a implementação dos códigos propostos e adaptados para 
+                a construção de interfaces gráficas.
+                </p>
+            </div>
+        </section>
+
+        <section id="batelada">
+            <div class = "container-fluid batelada text-rigth margin borderbatelada">
+                <h3> <i> 1. FERMENTAÇÃO MICROBIANA EM BATELADA </i> </h3>
+                <p>
+                    Um dado processo de fermentação pode ser conduzido de diferentes maneiras, cada uma delas 
+                    conferindo ao bioprocesso vantagens e limitações peculiares ao cultivo fermentativo, tudo isso 
+                    em decorrência de questões cinéticas que explicam o crescimento das células microbianas que fazem
+                    a bioconversão desejada. 
+                </p>
+                <p>
+                    Uma dessas maneiras de se operar um processo fermentativo é a batelada, que permite o 
+                    crescimento de bactérias, fungos e leveduras em placas de Petri, erlenmyers incubados em 
+                    <i> shakeres </i> (culturas em pequena escala) ou até mesmo em biorreatores industriais 
+                    (escala ampliada). Nesse modo de operação, antes do cultivo ser iniciado, todos os insumos 
+                    que vão ser utilizados para a reação, como meio nutriente, soluções tampão e as biofábricas 
+                    em si (estas chamadas aqui de inóculo, uma subcultura de microrganismos) são adicionados ao 
+                    ambiente reacional no qual irá ocorrer a fermentação, sem que durante todo o processo ocorra 
+                    adição ou retirada de material do sistema. Mas, se for necessário fazer alguma correção do pH 
+                    do meio, temos uma exceção a essa regra, já que será preciso adicionar soluções de ácido e base 
+                    a fim de se manter a atividade biocatalítica dos microrganismos fermentadores. 
+                </p>
+                <p>
+                    Entretanto, essa característica particular da batelada, de ocorrer na ausência de entrada e 
+                    saída de matéria, embora traga maior facilidade operacional, já que dispensa preocupação com 
+                    alimentação parcial ou mesmo contínua do processo, faz com que seja mais difícil controlar a 
+                    taxa de oxigênio dissolvida (OD) na fase liquida do sistema, limitando, assim, o crescimento 
+                    microbiano e o rendimento do bioprocesso. 
+                </p>
+                <div class = "container imagem borderimgcrescimento">
+                    <center>
+                        <img src = "img/curva_crescimento.png" width="500px" ALT="HTML">
+                    </center>
+                </div>
+                <div class = "container legenda text-center">
+                    <p><b>
+                        O crescimento microbiano é marcado por quatro fases distintas características
+                        e bem definidas.
+                    </b> </p>
+                </div>
+                <p>
+                    Esse crescimento pode, por sua vez, ser representado por quatro fases clássicas, começando 
+                    pela <i> lag </i>, quando as culturas em batelada estão ainda se adaptando ao meio no qual foram 
+                    inoculadas, e uma vez adaptadas ao novo hábitat, passam a sintetizar todo o aparato enzimático
+                    que irá permitir que as células assimilem os substratos solúveis disponibilizados no ambiente 
+                    extracelular. É assim que a população microbiana cresce e entra na fase exponencial, ou log. 
+                    Como o próprio nome sugere, é nessa etapa que ocorre um aumento substancial no crescimento da 
+                    cultura, de forma que nesse momento a taxa de crescimento específica (µ), característica para 
+                    cada espécie, alcança seu valor máximo.
+                </p>
+                <p>
+                    Seguindo à fase de equilíbrio e estabilidade (fase estacionária), onde o número de 
+                    microrganismos que são gerados se iguala ao que sofre morte celular, os nutrientes começam 
+                    a se tornar cada vez mais escassos, sem falar que os produtos do metabolismo tendem a se 
+                    acumular no ambiente reacional, fatores esses que levam à diminuição da velocidade de 
+                    crescimento, ou divisão, microbiana, característica esse que é uma marca registrada dos 
+                    bioprocessos em batelada.  Toda essa dinâmica de crescimento pode ser simulada e modelada 
+                    por meio de equacionamentos matemáticos adequados, como os que disponibilizamos aqui.
+                </p>
+            
+        </section>
+
+        <section id="balanco massa">
+            <div class = "container balancomassa text-rigth margin borderbalanco">
+                <h3> 1.1. BALANÇO DE MASSA </h3>
+                <p>
+                    O equacionamento de balanços de massa, algo fundamental para processos biológicos, como a 
+                    fermentação, baseia-se no princípio de que toda e qualquer forma de matéria nunca é criada ou
+                    mesmo destruída, mas sim apenas convertida. Através da realização do balanço
+                    de massa, é possível a criação e 
+                    implementação, de modelos matemáticos que atendam às condições químicas e de cinética 
+                    microbiana segundo as quais operações com culturas em batelada, batelada alimentada e 
+                    contínua são conduzidas, possibilitando a obtenção de equações que permitem compreender, 
+                    controlar e otimizar as reações bioquímicas através de equacionamentos simples e versáteis 
+                    que consideram apenas variáveis operacionais realmente relevantes para a simulação frente a 
+                    modelos mais complexos e multivariáveis, ou ainda de certo modo limitados.
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    Acúmulo = Entra – Sai + Formado – Consumido        
+                    $$
+                </div>
+                <p>
+                <br/>
+                    Para culturas microbianas em cultivo submerso, com os biorreatores operando em modo 
+                    batelada simples e partindo-se da equação geral de balanço mássico é possível determinar 
+                    o perfil matemático segundo o qual a concentração de biomassa, de substrato nutriente e 
+                    produto do metabolismo primário e/ou secundário microbiano  varia com o decorrer do 
+                    tempo de cultivo.
+                </p> 
+                <p>
+                    Todos os algoritmos de simulação e modelagem FermenPy desenvolvidos têm embutidas
+                    equações diferencias ordinárias (EDOs) deduzidas a partir de equacionamentos de
+                    balanço de massa considerando a premissa de que as células em cultivo não são exercidos
+                    qualquer tipo de efeito causado por inibição que possa ter influência direta no 
+                    crescimento do microrganismo (seja pelo produto, pelo substrato e pela concentração 
+                    celular), além de que há presença de morte celular, bem como apenas consumo de substrato 
+                    e formação de produto.
+                </p>
+            </div>
+            <div class = "container balancocx borderbalancocx marginbalancocx">
+                <h4> <i> <b> 1.1.1. Células (biomassa) </i> </b> </h4>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    Acúmulo = Formado – Consumido        
+                    $$
+                    $$
+                    {d (m.x)\over {dt}} = {rx.V} - {rdx.V}
+                    $$
+                    $$
+                    {d (Cx.V)\over {dt}} = {rx.V} - {rdx.V}
+                    $$
+                </div>
+                <p>
+                <br/>
+                    Uma vez que em reatores batelada o volume (V) pode ser considerado constante, já que 
+                    não há presença de correntes de entrada e saída:
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    {V.d (Cx)\over {dt}} = {rx.V} -{rdx.V}
+                    $$
+                    $$
+                    {d (Cx)\over {dt}} = {rx} - {rdx}
+                    $$
+                    $$
+                    {d (Cx)\over {dt}} = {&#x3BC;.Cx - Kd.Cx}
+                    $$
+                    <div class = "container formulasfinais borderformulasfinais">
+                        $$
+                        {d (Cx)\over {dt}} = {(&#x3BC-Kd).Cx}
+                        $$
+                    </div>
+                </div>
+                <p>
+                <br/>
+                    A variação da concentração de células (Cx) com o tempo pode, assim, ser interpretada 
+                    como uma função direta da taxa específica de crescimento (&#x3BC;), em unidades de 
+                    tempo-1, bem como da própria densidade celular que se encontra presente no  meio 
+                    reacional, sendo rx a velocidade com a qual ocorre o processo de crescimento microbiano 
+                    (r = &#x3BC;) e rdx o de morte celular, sendo Kd a constante que recebe o mesmo nome
+                    e é definida segundo a mesma grandeza da taxa &#x3BC;.
+                    A integração analítica da diferencial destacada, para um dado intervalo de 
+                    tempo de cultivo iniciado em t = 0 e finalizado em t = t´ permite a quantificação direta 
+                    de Cx para um valor de tempo definido, de modo que a integração analítica pode ser 
+                    realizada através do método de separação de variáveis, considerando que o valor de &#x3BC; 
+                    será considerado constante para fins de simplificação dos cálculos.
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    {1\over{Cx}} = &#x3BC;.dt
+                    $$
+                    $$
+                    \int_{Cx0}^{Cx} {1\over{Cx}}\, dCx = \int_{0}^{t'} &#x3BC;\, dt 
+                    $$
+                    $$
+                    \int_{Cx0}^{Cx} {1\over{Cx}}\, dCx = &#x3BC;.\int_{0}^{t'} \, dt 
+                    $$
+                    $$
+                    ln⁡[(Cxf)-ln⁡(Cxo)= µ .(t´-0)]
+                    $$
+                    $$
+                    ln({Cx0\over{Cx}}) = &#x3BC;.t'
+                    $$
+                    <div class = "container formulasfinais borderformulasfinais">
+                        $$
+                        e^{(&#x3BC;.t')} = {Cxf\over{Cx}}
+                        $$
+                    </div> 
+                </div>
+                <p>
+                    <br/>
+                    A equação final integrada também pode ser obtida pela criação e execução de algoritmo de 
+                    programação em Python, o qual integra implementa técnicas de integração numérica, 
+                    não mais analítica. 
+                    </p>
+            </div>
+
+            <div class = "container balancocs borderbalancocs marginbalancocs">
+                <h4> <i> <b> 1.1.2. Substrato (nutriente) </i> </b> </h4>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    Acúmulo =  – Consumido        
+                    $$
+                    $$
+                    {d (m.s)\over {dt}} =  - {rs.V}
+                    $$
+                    $$
+                    {d (Cs.V)\over {dt}} = - {rs.V}
+                    $$
+                </div>
+                <p>
+                <br/>
+                    Uma vez que, à semelhança do ocorrido com o balanço de massa para as células,
+                    não há variação no volume total (V) do biorreator, o qual está sendo operado
+                    em batelada, de maneira que não há nenhum tipo de alimentação do sistema:
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    {V.d (Cs)\over {dt}} = - {rs.V}
+                    $$
+                    $$
+                    {d (Cs)\over {dt}} =  - {rs}
+                    $$
+                    <div class = "container formulasfinais borderformulasfinais">
+                        $$
+                        {d (Cs)\over {dt}} =  {-1\over{Yxs}}.&#x3BC;.Cx
+                        $$
+                    </div>
+                </div>
+                <p>
+                    <br/> Diante do detalhamento para o equacionamento proposto, o meio nutriente (Cs) fornecido
+                    às biofábricas fermentadoras (substrato), é consumido pelas mesmas, através do fenômeno
+                    da transferência de massa, que se dá em meio líquido, segundo a taxa de consumo denotada
+                    por rs, a qual, uma vez relacionada à taxa de formação de biomassa, rx, de acordo com a razão
+                    rx.rs-¹, dá origem ao coeficiente Yxs. Este, por sua vez, é indica, em termos quantitivos, 
+                    o quanto de substrato é destinado, no interior da célula microbiana, para permitir o adequado
+                    funcionamento do aparato bioquímico especializado responsável pelo seu crescimento, já que
+                    pode também ser representado pela variação entre as concentrações final e inicial de 
+                    células e substância nutriente
+                    (Cxf-Cx0).(Csf-Cs0)-¹. Assim, após a realização de tratamentos
+                    matemáticos mais aprofundados, é possível definir a variação temporal da concentração de 
+                    nutriente no meio fermentado em função do coeficiente de rendimento Yxs (fornecido em 
+                    unidades de gx.gs-¹), da taxa específica
+                    de crescimento (&#x3BC;), a qual pode ser descrita por qualquer modelo cinético não estruturado existente) 
+                    e da concentração de biomassa acumulada (Cx) no interior do tanque.
+                </p>
+            </div>
+
+
+            <div class = "container balancocp borderbalancocp marginbalancocp">
+                <h4> <i> <b> 1.1.3. Produto (metabólito) </i> </b> </h4>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    Acúmulo = Formado       
+                    $$
+                    $$
+                    {d (m.p)\over {dt}} = {rp.V} 
+                    $$
+                    $$
+                    {d (Cp.V)\over {dt}} = {rp.V} 
+                    $$
+            </div>
+            <p>
+                <br/>
+                Para cultivos conduzidos no interior de reatores aos quais não há adição ou retirada
+                de correntes de materiais, característico de fermentações em batelada, o volume (V) reacional
+                pode ser considerado constante durante todo o período em que o evento bioquímico estiver 
+                ocorrendo:
+            </p>
+            <div class = "container formulas text-left borderformula">
+                $$
+                {V.d (Cp)\over {dt}} = {rp.V} 
+                $$
+                $$
+                {d (Cp)\over {dt}} = {rp}
+                $$
+                <div class = "container formulasfinais borderformulasfinaismaiores">
+                    $$
+                    {d (Cp)\over {dt}} = {&#x3B1;.&#x3BC;.Cx}; (1)
+                    $$
+                    $$
+                    {d (Cp)\over {dt}} = {&#x3B2;.Cx}; (2)
+                    $$
+                    $$
+                    {d (Cp)\over {dt}} = {(&#x3B1;.&#x3BC;+&#x3B2;).Cx}; (3)
+                    $$
+                </div>
+            </div>
+                <p>
+                    <br/>
+                    A formação de um determinado metabólito (definida para fins de equacionamento como
+                    Cp) pela célula microbiana é função direta da
+                    taxa de formação do produto, dada por rp, estando intrinseca e invariavelmente 
+                    relacionada ao tipo de produto excretado para o meio extracelular. Dessa maneira, 
+                    as moléculas produzidas com o intuito de corroborar e permitir o crescimento do
+                    microrganismo (metabólitos primários) são acumuladas no caldo fermentado, em função
+                    do tempo de cultivo (t), seguindo um perfil matemático (1) o qual descreve uma dependência entre
+                    a concentração do produto formada com a taxa específica de crecimento (&#x3B2;), a 
+                    concentração de biomassa (Cx) e uma constante adicional &#x3B1;, referenciada pela literatura
+                    científica como constante associada ao produto, equacionada pelo modelo de Luedeking & 
+                    Piret.
+                </p>
+                <p>
+                    Por outro lado, quando as células microbianas produzem compostos que possuem como 
+                    funcionalidade única e exclusiva a proteção ou ainda coloração das mesmas, os metabólitos
+                    celulares passam a ser classificados como secundários e são acumulados no meio reacional
+                    segundo uma diferencial (2) a qual estabelece uma relação direta entre a concentração
+                    celular observada no caldo e a constante associada ao produto (modelo de Luedeking & 
+                    Piret), sendo esta, nesse momento, denominada por &#x3B2;.
+                </p>
+                <p>
+                    A formação de produtos pode, ainda, adquirir um terceiro e último caráter matemático,
+                    para casos em que os metabólitos de interesse comercial obtidos ao final do processo 
+                    fermentativo microbiano apresentar uma dependencia parcial em relação ao crecimento 
+                    celular das biofábricas, a taxa (3).
+                </p>
+        </section>
+
+
+        <section id="modelos cineticos">
+            <div class = "container-fluid modelos text-rigth margin">
+                <h3> <i> 2. MODELOS CINÉTICOS NÃO ESTRUTURADOS </i> </h3>
+                <p>
+                </p>
+            </div>
+        </section>
+
+        <section id="ausencia inibicao">
+            <div class = "container ausencia text-rigth margin borderausencia">
+                <h3> 2.1. AUSÊNCIA DE INIBIÇÃO </h3><a></a>
+                <h4> <i> <b> 2.1.1. Contois (1959) </i> </b> </h4>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' 
+                async></script>
+                <p>
+                    O modelo cinético de Contois (1959) evidencia a dependência da velocidade do crescimento 
+                    celular com a taxa específica de crescimento (µ). Trata-se de uma equação matemática 
+                    simples, uma vez que apresenta apenas duas variáveis, e que mostrou ser eficiente e 
+                    confiável quando empregada para o ajuste de diferentes conjuntos de dados experimentais 
+                    coletados durante a realização de ensaios ligados a processos que envolvem a degradação de 
+                    matéria orgânica biodegradável. 
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{Cs\over{KSX+Cs}}}
+                    $$
+                    <p><i>
+                    <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        KSX = Constante de saturação (massa.volume-¹) </i></p> 
+                </div>
+                <br/>
+                <p>
+                    A principal característica desse modelo preditivo de primeira ordem (adequado para a 
+                    descrição de reações hidrolíticas) está centrada no fato de que o mesmo induz à interpretação 
+                    de que a velocidade de crescimento celular é quantitativamente dependente das concentrações do
+                    substrato fornecido às biofábricas, bem como à concentração celular segundo a qual as mesmas 
+                    se encontram. Em adição, a consideração crucial de que todos os bioprocessos que ocorrem com 
+                    a bioconversão de um dado substrato são limitados frente à área superficial disponível para 
+                    acesso às moléculas nutrientes pelo microrganismo, e, portanto, pela transferência de massa, a
+                    taxa específica de crescimento descrita matematicamente por Contois pode ser analisada frente a 
+                    uma nova perspectiva quantitativa.
+                </p>
+                <p>
+                    Diante desse cenário, sempre que houver um aumento na concentração de células no meio 
+                    reacional, este será acompanhado por uma redução crescente de acesso ao substrato pelas mesmas.
+                    Dessa maneira, à medida que o fermentador passa a armazenar uma concentração muito alta de 
+                    biomassa, uma característica intrínseca a operações em batelada, o crescimento celular passa
+                    a ficar cada vez mais lento.
+                </p>
+                <p>
+                    Estudos publicados pela literatura científica indicam que a adoção do modelo cinético não 
+                    estruturado proposto por Contois é a melhor estratégia para a descrição de eventos 
+                    bioquímicos nos quais a transferência de massa, representada pela chegada do substrato ao 
+                    interior da célula microbiana, onde através de aparato enzimático especializado será 
+                    adequada metabolizado, ocorre por difusão, como em reatores com cultivo submerso 
+                    (substrato na fase líquida) e bactérias imobilizadas na forma de biofilmes 
+                    (processos de tratamento anaeróbio de efluentes orgânicos).
+                </p>
+                <br/>
+
+                <h4> <i> <b> 2.1.2. Monod (1942) </i> </b> </h4>
+                <p>
+                    A expressão empírica proposta por Monod (1942) permite a predição da taxa específica de 
+                    crescimento (&#x3BC;) através de sua relação com a concentração de substrato (equação 
+                    baseada em apenas uma variável), de maneira que a uniformidade e o rendimento celular são 
+                    mantidos constantes durante toda a situação de crescimento. Como um entrave à sua aplicação,
+                    está o fato de que esse modelo cinético fornece resultados quantitativos, baseados em 
+                    regressões matemáticas, apenas para culturas que se encontram em condição de crescimento 
+                    celular equilibrado (a estabilidade intracelular é alcançada), o que acontece durante as 
+                    fases de crescimento exponencial e estacionária, tendo mostrado não ser adequada para a 
+                    descrição da cinética de crescimento durante as fases transitórias, como a <i>lag</i>.
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{Cs\over{Ks+Cs}}}
+                    $$
+                    <p><i>
+                    <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹) </i></p> 
+                </div>
+                <br/>
+                <p>
+                    Embora simples e com pouco ou nenhum significado físico e teórico (segundo alguns autores),
+                    a equação de Monod apresenta grande eficiência quando utilizada em uma vasta gama de 
+                    situações tanto dinâmicas quanto estacionárias, o que faz com que seja de suma importância 
+                    para o controle de bioprocessos, muito embora não seja abrangente para todos os casos de 
+                    fermentação. Ademais, a exemplo de todos os outros modelos cinéticos que dele derivem, 
+                    representa um modelo empírico para um único substrato. Porém, a cinética de Monod ainda é a 
+                    que melhor descreve e delimita as quatro fases características do crescimento microbiano.
+                </p>
+                <p>
+                    A equação cinética preditiva de Monod introduz, por si só, o conceito de nutriente 
+                    limitante, de maneira que estabelece uma relação causal entre o fim do crescimento 
+                    microbiano e a exaustão do suprimento do substrato. Estudos sugerem que, para uma fase 
+                    <i> lag </i> de curta duração, elevadas concentrações de nutriente culminam, de acordo com
+                    a cinética de Monod, em uma maior taxa de crescimento celular. Contudo, modelos mais 
+                    complexos e abrangentes em considerar possíveis efeitos inibitórios que se fazem presentes 
+                    nas culturas analisadas, a exemplo daqueles decorrentes da competição frente à baixa 
+                    quantidade de substrato disponível no meio reacional, permitiram maior sucesso quando do 
+                    ajuste dos dados de cultivo.
+                </p>
+                <p>
+                    Entretanto, o equacionamento clássico de Monod, ao relacionar a taxa específica de 
+                    crescimento a um único substrato limite para a ocorrência da transformação bioquímica, não 
+                    leva em consideração o fato de que as células microbianas podem necessitar de substrato mesmo
+                    quando se encontram durante o período em que não apresentam crescimento celular, uma vez que
+                    precisam de fonte de carbono para manter a sua estrutura física. Por essa razão, alguns 
+                    modelos disponíveis na literatura introduzem ao modelo tradicional de Monod termos que 
+                    remetem à manutenção. 
+                </p>
+                <p>
+                    Em adição, embora a cinética bioquímica de Monod apresente uma semelhança muito próxima à 
+                    cinética enzimática predita por <i> Michaelis – Mentem </i>, não deve ser considerada 
+                    cruamente como uma variação daquela. É correto afirmar que da mesma forma que a constante 
+                    "Km", corresponda à concentração de substrato para a qual a velocidade da reação de 
+                    catálise enzimática representa a metade da máxima para uma dada biotransformação, 
+                    a constante de saturação, ou ainda de afinidade (entre o substrato e a célula catalisadora), 
+                    "Ks", de Monod o faz em relação à taxa específica de crescimento para uma dada reação bioquímica. 
+                </p>
+                <p>
+                    Contudo, a equação preditiva para a cinética de ação dos biocatalisadores é restrita a uma 
+                    única molécula de enzima, ao passo que os eventos bioquímicos, a exemplo da fermentação, uma 
+                    vez realizados pelo aparato enzimático especializado dos microrganismos, se expandem para uma
+                    grande quantidade de enzimas envolvidas no processo. 
+                </p>
+                <br/>
+
+                <h4> <i> <b> 2.1.3. Moser (1958) </i> </b> </h4>
+                <p>
+                    O equacionamento empírico, proposto por Hermann Moser (1958) corresponde a uma modificação
+                    ao modelo de Monod, de maneira que ao integrar o termo “u” promove uma melhoria à mesma, 
+                    provendo um grau de liberdade adicional à expressão cinética tradicionalmente conhecida.
+                </p>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{Cs^u\over{Ks+Cs^u}}}
+                    $$
+                    <p><i>
+                    <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹) </i></p>
+                    <p><i>
+                        u = termo expoente (adimensional)
+                    </i></p>   
+                </div>
+                <br/>
+                <p>
+                    Para situações matemáticas nas quais o parâmetro "u" se iguala a 1, a taxa específica de 
+                    crescimento descrita (&#x3BC;) por Moser passa a ser idêntica àquela predita por Monod. 
+                    Contudo, os valores mais comumente encontrados para o parâmetro são superiores a 1.
+                    Adicionalmente, a introdução deste parâmetro ao equacionamento é um indicativo da ocorrência 
+                    de consumo de substrato pelo microrganismo seguindo uma expressão matemática de ordem superior 
+                    através do fenômeno da transferência de massa. Sendo assim,
+                    uma vez um parâmetro ajustável, "u" garante um grau de flexibilidade maior ao ajuste de 
+                    dados experimentais, concomitantemente à predição do comportamento dinâmico 
+                    microbiano observado em reatores de tanque agitado operados de modo contínuo em termos 
+                    de entrada de material nutriente.
+                    
+                </p>
+                <div class = "container imagem borderimgmoser">
+                    <center>
+                        <img src = "img/grafico_moser.png" ALT="HTML">
+                    </center>
+                </div>
+                <div class = "container legenda text-center">
+                    <p><b>
+                        A atribuição de valores elevados para o parâmetro cinético de Moser ("u") resulta em
+                        um aumento na velocidade de crescimento microbiano, com consequente aceleração
+                        no consumo do substrato disponível no meio reacional.
+                    </b> </p>
+                </div>
+                <p>
+                    A implementação de algoritmos baseados na resolução, por integração numérica, do sistema
+                    de EDOs, seguindo a cinética preditiva não estruturada proposta por Moser para a taxa de
+                    crescimento (&#x3BC;) permite a construção de gráficos que elucida a influência direta que
+                    o parâmetro "u" equacionado exerce em toda o metabolismo microbiano.
+                </p>
+                <br/>   
+
+                <h4> <i> <b> 2.1.4. Cinética Constante </i> </b> </h4>
+                <p>
+                    Muito embora existam diversos modelos cinéticos não preditivos para a velocidade de 
+                    crescimento microbiano os quais, por sua vez, equacionam a taxa específica de crescimento
+                    &#x3BC; como uma função de parâmetros variáveis, a exemplo das concentrações de substrato, de 
+                    biomassa e de produto, bem como de outros termos constantes, é possível também relizar uma 
+                    previsão acerca do comportamento dinâmico do processo fermentativo frente a valores constantes
+                    de  &#x3BC;.
+                </p>
+                <div class = "formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;}
+                    $$ 
+                </div>
+                <p>
+                <br/>
+                    Dessa maneira, para essa situação, a taxa  &#x3BC; irá apresentar constância em seu valor
+                    durante todo o período de tempo dentro do qual o evento bioquímico da fermentação microbiana
+                    estiver ocorrendo, independentemente de qualquer fator externo às biofábricas, como quantidade
+                    de nutriente, produto gerado como produto do seu metabolismo primário e/ou secundário ou ainda
+                    de células no caldo fermentado. 
+                </p>
+                <div class = "container imagem borderimgmi">
+                    <center>
+                        <img src = "img/influencia_mi.png" width="550px" ALT="HTML">
+                    </center>
+                </div>
+                <div class = "container legenda text-center">
+                    <p><b>
+                        Quanto maior o valor atribuído a taxa específica de crescimento &#x3BC;, mais rápido
+                        se dá a produção de biomassa, acompanhado pelo aumento do acúmulo de produto e redução 
+                        da quantidade de susbtrato disponível às células, perfil característico de bioprocessos
+                        em batelada.
+                    </b> </p>
+                </div>
+                <p>
+                    Entretanto, é válido ressaltar que a velocidade de crescimento é direta e invariavelmente 
+                    influenciada pela temperatura segundo a qual a biotransformação está sendo conduzida e pode,
+                    assim, apresentar diferentes valores, os quais interferem diretamente em toda a cinética do 
+                    bioprocesso. Contudo, estudos práticos disponibilizados através da literatura científica
+                    evidenciam que mesmo apresentando variações frente ao tipo de microrganismo estudado, a taxa
+                    &#x3BC; encontra-se dentro de uma faixa limitada de valores, normalmente inferior ao valor
+                    1,5, sendo esta mensurada em unidade de tempo inverso. 
+                </p>
+            </div>
+        </section>
+
+        <section id="inibicao substrato">
+            <div class = "container substrato text-rigth margin bordersubstrato">
+                <h3> <i> 2.2. INIBIÇÃO PELO SUBSTRATO </i> </h3>
+                <h4> <i> <b> 2.2.1. Andrews (1968) </i> </b> </h4>
+                <p>
+                    O modelo cinético não linear proposto por Andrews (1968) representa uma derivação da 
+                    equação empírica clássica de Monod, descrevendo, por sua vez, eventos bioquímicos nos 
+                    quais são observados efeitos inibitórios pelo substrato, através de uma relação matemática
+                    entre a constante de meia velocidade (denominada na literatura por Ksi), taxa de crescimento
+                    específica máxima (&#x3BC;máx) e da constante de inibição pelo substrato denotada por KI. Este
+                    último termo é o responsável por quantificar a influência de um determinado composto tóxico 
+                    presente em uma dada transformação microbiana. Estudos de bioprocessos de degradação de 
+                    compostos químicos conduzidos em batelada possibilitaram a obtenção de resultados que 
+                    evidenciam o potencial do equacionamento de Andrews em predizer o efeito que a inibição 
+                    proporcionada pela presença de um substrato único causa no crescimento celular frente àquela 
+                    realizada por Monod em casos nos quais a concentração inicial de substratos potencialmente 
+                    tóxicos às biofábricas tende a aumentar (normalmente para valores de concentração
+                    celular inicial que ultrapassam o valor de 30mg/L).
+                </p>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{Cs\over{Ks+{Cs\over{KIS}}}}}
+                    $$
+                    <p><i>
+                    <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹) </i></p>
+                    <p><i>
+                        KIS = Constante de inibição pelo substrato (massa.volume-¹)
+                    </i></p>   
+                </div>
+                <br/>
+                <p>
+                    No que tange ao coeficiente de inibição "KIS”, este ilustra, através de termos quantitativos, 
+                    o impacto da toxicidade de um dado componente em estudo em um processo de biodegradação 
+                    realizada por intermédio de células microbianas, de maneira que para culturas altamente 
+                    sensíveis ao efeito tóxico do substrato em análise, o termo cinético "KIS" tende a apresentar-se 
+                    segundo valores mais baixos. Entretanto, valores elevados para essa constante evidenciam maior 
+                    tolerância dos cultivos ao efeito inibitório apresentado pelo composto químico fornecido como 
+                    substrato, de modo que a equação de Andrews tende assim, portanto, a se reduzir à equação de
+                    Monod, a qual não prevê qualquer tipo de inibição. 
+                </p>
+                <p>
+                    É importante salientar que trabalhos que tiveram como foco o estudo cinético da 
+                    biodegradação de etilbenzeno realizada através da aplicação de culturas isoladas e mistas 
+                    relatam que estas últimas apresentam maiores valores para “Ki”, sendo, portanto, mais 
+                    resistentes ao processo de inibição pela presença de altas concentrações de substratos
+                    tóxicos no meio reacional. Em adição, em condições de baixas concentrações de substrato, 
+                    as diferenças existentes entre os equacionamentos propostos por Andrews e Monod são 
+                    praticamente nulas, de maneira que o parâmetro cinético adicional Ki passa a não 
+                    apresentar nenhuma função quando do ajuste de dados experimentais na modelagem desses 
+                    processos. 
+                </p>
+                <p>
+                    Há relatos na literatura de que o modelo cinético de Andrews, por vezes também denotado 
+                    por modelo de <i> Haldane </i>, prediz um estado estacionário1, além de que pode ser 
+                    equacionado em termos da velocidade de consumo do substrato, e não do crescimento 
+                    microbiano.
+                </p>
+                <p>
+                    Além disso, o equacionamento de Andrews, proposto para um único substrato, pode ser
+                    associado a ferramentas que lançam mão do método de Runge- Kutta (4ª ordem) para 
+                    integração numérica de equações diferenciais e, assim, empregada para modelagem matemática,
+                    a equação cinética de Andrews permite a predição da limitação ocasionada pela concentração
+                    de um determinado substrato através da constante "KIS", a qual quando muito elevada implica 
+                    na não influência inibitiva em decorrência da presença do substrato empregado para o 
+                    bioprocesso em estudo. Com isso, uma vez sendo KIS >> Cs, a equação passará a ser igual
+                    àquela descrita por Monod.
+                </p>
+                <p>
+                    Tal equacionamento, proposto para permitir a predição do comportamento (dinâmico) do 
+                    crescimento microbiano na presença de um substrato com potencial inibitório em função da
+                    inibição das enzimas celulares em função da concentração do agente inibidor. Segundo 
+                    os escritos do próprio autor do modelo cinético preditivo, a constante cinética “KIS” 
+                    é equivale numericamente à concentração máxima de substrato para a qual a taxa de 
+                    crescimento específica é exatamente igual à metade da taxa de crescimento específica 
+                    máxima em condições reacionais as quais não exponha a cultura a
+                    nenhum composto potencialmente tóxico à mesma. Contudo, elucida que tal 
+                    equacionamento não apresenta nenhuma base teórica, mas se baseia na equação empírica de 
+                    Monod, a qual apresenta similaridade com a cinética enzimática de <i> Michaelis-Mentem </i>, 
+                    além de que estudos, já àquela época, evidenciaram que a taxa de oxidação de nitrito
+                    poderia se relacionar diretamente à concentração de nitrito por esse tipo de inibição.
+                </p>
+                <br/>
+                
+                <h4> <i> <b> 2.2.2. Wu et al (1988) </i> </b> </h4>
+                
+                <p>
+                    Originalmente, o modelo cinético de Wu et al (1988), preditivo para a investigação do 
+                    efeito inibitório do substrato na cinética de crescimento microbiano com uma
+                    formulação matemática aplicada para descrever a taxa de utilização (U e Umáx), em termos 
+                    de demanda química de oxigênio (DQO), da constante de inibição "Ke" e do coeficiente de 
+                    resposta à inibição "v".
+                </p>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{Cs\over{Ks+Cs+Cs({Cs\over{Ke}})^v}}}
+                    $$
+                    <p><i>
+                        <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹) </i></p>
+                    <p><i>
+                        Ke= Constante de inibição pelo substrato (massa.volume-¹) </i></p>
+                    <p><i>
+                        v= Parâmetro expoente de Wu <i>et al</i> (adimensional) </i></p>      
+                </div>
+                <br/>
+            <p>
+                Sendo assim, uma vez aplicada para a descrição de fenômenos bioquímicos nos quais nenhum tipo
+                de inibição é observado, o equacionamento anterior passa a ser representado por aquele 
+                proposto pela cinética de Monod, ao passo que para um valor de n igual a 1, a taxa de 
+                crescimento microbiano passa então a ser afetada pelo efeito tóxico do substrato em estudo 
+                seguindo a relação cinética de Andrews.
+            </p>
+            </div>
+        </section>
+
+        <section id="inibicao produto">
+            <div class = "container produto text-rigth margin borderproduto">
+                <h3> <i> 2.3. INIBIÇÃO PELO PRODUTO </i> </h3>
+                <h4> <i> <b> 2.3.1. Aiba et al (1968) </i> </b> </h4>
+                <p>
+                    O modelo proposto por Aiba <i>et al</i> (1968) descreve a cinética de inibição pelo 
+                    produto. De acordo com estudos já publicados, para casos em que o produto gerado em um 
+                    determinado processo de fermentação não exerce nenhum efeito inibitório sobre a cultura 
+                    microbiana, a cinética de crescimento pode ser descrita através de uma relação simples 
+                    entre a taxa específica de crescimento (&#x3BC;) e a concentração de substrato limitante 
+                    ao bioprocesso (relação proposta por Monod). Por outro lado, quando o acúmulo desses 
+                    metabólitos passa a influenciar diretamente no crescimento celular, a concentração de 
+                    produto deve ser considerada para efeitos de equacionamento, uma vez que os parâmetros 
+                    “&#x3BC;máx” e “Ks” serão afetados pela inibição causada, sendo “&#x3BC;máx” assim 
+                    denominado por “&#x3BC;i” (taxa específica de crescimento máxima observada na presença do 
+                    agente inibidor). 
+                </p>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{Cs\over{Ks+Cs}}e^{(-Kp Cp)}}
+                    $$
+                    <p><i>
+                        <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹); </i></p>
+                    <p><i>
+                        Kp = Termo expoente de inibição pelo produto (volume.massa-¹); </i></p>
+                    <p><i>
+                        Cp = Concentração de produto (massa.volume-¹) </i></p>   
+                </div>
+                <br/>
+                <p>
+                    O equacionamento cinético não linear foi desenvolvido pelos autores a fim de predizer a 
+                    intensidade do efeito inibitório decorrente da concentração de etanol produzida e 
+                    acumulada em uma fermentação operada em batelada quando a glicose se torna o componente 
+                    limitante da biotransformação e apesar de que o coeficiente empírico “Kp” seja diretamente 
+                    dependente do processo bioquímico ser conduzido em batelada ou por culturas contínuas, o 
+                    parâmetro cinético “Ks” mostra-se invariável frente ao modo de operação adotado para a 
+                    fermentação estudada. 
+                </p>
+                <p>
+                    Nesse sentido, o equacionamento de Aiba e colaboradores foi desenvolvido com o intuito de 
+                    estabelecer uma relação exponencial entre a velocidade de crescimento microbiano e a 
+                    concentração de etanol durante fermentações do tipo alcoólica realizadas por leveduras 
+                    <i>(Saccharomyces cerevisiae)</i>, de modo que a constante “Kp” (expoente empírico em 
+                    termos de L/g) está intrinsecamente relacionada ao modo de operação do processo 
+                    fermentativo (descontínuo ou contínuo).
+                </p>
+                <p>
+                    Estudos acerca do crescimento microbiano assemelham a inibição ocasionada por metabólitos 
+                    celulares à cinética enzimática com inibição do tipo não competitiva e embora o modelo 
+                    de Aiba et al tenha sido proposto inicialmente para aplicação em bioprocessos envolvendo 
+                    a produção de bioetanol por <i>(Saccharomyces cerevisiae)</i>, é adequado para a descrição 
+                    cinética de outros processos de fermentação que são afetados pelos efeitos inibitórios do 
+                    acúmulo de produto. Entretanto, sua principal limitação está centrada no fato de que a 
+                    completa inibição do crescimento microbiano seria alcançada apenas quando a concentração de 
+                    produto tender ao infinito (concentrações muito elevadas), algo que seria irreal e, portanto, 
+                    não observado experimentalmente.
+                </p>
+                <br/>
+               
+                <h4> <i> <b> 2.3.2. Hope & Hansford (1982) </i> </b> </h4>
+                <p>
+                    O modelo cinético preditivo não estruturado de Hope & Hanford (1982) é aplicado para a 
+                    predição do efeito inibitório ocasionado em decorrência da presença de um determinado 
+                    produto no meio reacional no qual um determinado evento bioquímico está ocorrendo, 
+                    desconsiderando a influência que outros fatores externos, bem como a atividade celular, 
+                    exerce no processo de fermentação. De acordo com o equacionamento proposto, à medida que 
+                    concentração do produto no meio fermentado aumento, a taxa específica de crescimento decai. 
+                    Entretanto, a equação não faz nenhuma predição acerca da concentração de biomassa.
+                </p>
+                <br/>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{{Cs\over{Ks+Cs}}{{Kp\over{Kp+Cp}}}}}
+                    $$
+                    <p><i>
+                        <br/>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹); </i></p>
+                    <p><i>
+                        Kp = Termo expoente de inibição pelo produto (volume.massa-¹); </i></p>
+                    <p><i>
+                        Cp = Concentração de produto (massa.volume-¹) </i></p>   
+                </div>
+                <br/>
+                <p>
+                    O equacionamento se assemelha àquele aplicado para a descrição de cinéticas enzimáticas 
+                    do tipo não competitivas, podendo, por sua vez, ser adequadamente aplicado para a predição 
+                    da inibição da fermentação alcoólica por culturas de leveduras <i>Saccharomyces cerevisiae</i>. 
+                    Para tanto, ao modelo tradicionalmente conhecido de Monod, foi introduzido um termo para 
+                    descrever matematicamente a relação entre a taxa específica de crescimento (&#x3BC;) do 
+                    microrganismo e a inibição ocasionada pelo seu produto liberado para o meio fermentado. 
+                </p>
+                <p>
+                    Inicialmente, o modelo foi equacionado pioneiramente pelos autores com o intuito de 
+                    investigar o potencial de inibição do etanol na cinética da fermentação etanólica por 
+                    cepas de <i>Saccharomyces cerevisiae</i>, haja visto que muitos estudos preliminares e relatados 
+                    na literatura por outros pesquisadores já evidenciavam a existência desse caso de inibição pelo 
+                    produto, além de que trabalhos já haviam evidenciado também que o álcool sintetizado através desses 
+                    eventos bioquímicos é mais inibitório frente aquele adicionado, denominado por exógeno, ao meio 
+                    reacional para fins de estudos cinéticos. É importante salientar que o equacionamento foi aplicado 
+                    por ambos para o ajuste de dados experimentais coletados durante a condução de um cultivo operado em 
+                    modo contínuo com grande acúmulo de etanol e alimentação de glicose sob diferentes concentrações, 
+                    porém sempre constante. 
+                </p>
+                <p>
+                    Contudo, tal equação é capaz de fornecer uma ótima base cinética no que tange a 
+                    bioprocessos que ocorrem em batelada e batelada alimentada, permitindo ainda uma avaliação 
+                    econômica daqueles realizados por culturas contínuas que venham a ser desenvolvidos. 
+                </p>
+                <br/>
+
+                <h4> <i> <b> 2.3.3. Levenspiel (1980) </i> </b> </h4>
+                <p>
+                    O modelo de Levenspiel (1980) caracteriza preditiva e matematicamente o efeito da 
+                    concentração de produto sobre a taxa específica de crescimento (&#x3BC;), a partir de um 
+                    equacionamento de relativa simplicidade que não exige trabalho computacional intensivo, 
+                    e que, sobretudo, é aplicável e eficiente para a descrição de uma vasta gama de processos, 
+                    com destaque àqueles que envolvem a produção de bioetanol. Ao expressar a taxa de crescimento
+                    celular em função das concentrações de substrato e de produto, a presença do termo “Pmáx” na 
+                    equação proposta pelo autor indica a concentração máxima de produto na qual é cessado o 
+                    crescimento das células catalisadoras em uma determinada biotransformação, ao passo que o 
+                    parâmetro “n” está diretamente relacionado à inibição ocasionada pelo produto do seu metabolismo 
+                    gerado durante o bioprocesso. 
+                </p>
+                <br/>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{{Cs\over{Ks+Cs}}{{(1- {Cp\over{Cp*}})}^n}}}
+                    $$
+                    <p><i>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹) </i></p>
+                    <p><i>
+                        Cs*= Concentração de produto limite (massa.volume-¹) </i></p>
+                    <p><i>
+                        n = Parâmetro expoente de Levenspiel (massa.volume-¹) </i></p>
+                </div>
+                <br/>
+                <p>
+                    Portanto, quando utilizado para casos de fermentação etanólica, a constante “n” 
+                    encontra-se diretamente relacionada ao efeito inibitório causado à cultura pelo acúmulo 
+                    das moléculas de bioetanol (parâmetro empírico esse diretamente relacionado também à 
+                    concentração de substrato presente no mosto), de maneira que elevados valores para este 
+                    parâmetro indicam que o microrganismo fermentador é mais sensível à concentração de etanol 
+                    vinho fermentado. Em adição, estudos previamente realizados por outros autores e que 
+                    avaliaram a inibição causada pelo acúmulo de etanol no meio fermentado quando da fermentação 
+                    alcoólica por <i>Saccharomyces cerevisiae</i>, relatam a eficiência do modelo de Levenspiel 
+                    em ajustar de maneira altamente eficiente os dados experimentais oriundos desses bioprocessos. 
+                </p>
+                <p>
+                    A característica mais importante apresentada pelo modelo cinético de Levenspiel está 
+                    centrada no seu potencial de predizer a concentração máxima de etanol que as células de 
+                    levedura são capazes de tolerar antes que as mesmas interrompam o processo de crescimento 
+                    celular, haja visto que esse valor, aproximado, para uma grande parte dos cultivos deve 
+                    ser extrapolado numericamente, uma vez que se encontra fora da faixa dos valores 
+                    experimentalmente obtidos no que tange à concentração de produto mensurada durante a 
+                    ocorrência do processo fermentativo para a bioprodução de etanol. 
+                </p>
+                <p>
+                    Aprofundando as análises acerca do parâmetro cinético “n”, componente intrínseco à equação 
+                    cinética proposta por Levenspiel, uma vez sendo uma representação da inibição pelo produto 
+                    ocasionada pelo acúmulo do mesmo no vinho, é relatado na literatura científica a existência 
+                    de uma relação direta entre o mesmo e a concentração de etanol obtida ao término do processo 
+                    de fermentação.
+                </p>
+                <p>
+                    Dessa maneira, torna-se evidente o fato de que o potencial inibitório do etanol é mais 
+                    pronunciado em caldos fermentados que apresentam os maiores valores para a concentração 
+                    deste metabólito primário, sendo a afirmação inversa também válida, efeito de inibição
+                    este carregado para a análise cinética em termos de velocidade de crescimento celular (&#x3BC;) 
+                    através do modelo de Levenspiel. Com isso, o equacionamento permite a predição matemática 
+                    do parâmetro “n”, o qual independe da temperatura segundo a qual o evento bioquímico está 
+                    sendo conduzido, a partir da concentração de produto obtida decorrente da quantidade de 
+                    substrato, também em termos da relação massa/volume, fornecido para as células através do 
+                    mosto. 
+                </p>
+                <p>
+                    Sendo assim, o valor deste termo aproximado para processos fermentativos que apresentam 
+                    baixo acúmulo de produto (inferior ou igual a 80g/L) não devem ser utilizados para a 
+                    simulação daqueles nos quais ocorre uma elevada produção de etanol, já que o efeito da 
+                    inibição torna-se mais evidente e relevante apenas para estes últimos. Além disso, 
+                    quando operados em temperaturas mais amenas, a fim de diminuir os efeitos tóxicos causados 
+                    pelo acúmulo do bioetanol (em decorrência da diminuição da fluidez e consequente 
+                    permeabilidade da membrana celular à molécula de álcool), a concentração de substrato 
+                    fornecida deve ser mais elevada. 
+                </p>
+            </div>
+        </section>
+
+        <section id="inibicao biomassa">
+            <div class = "container biomassa text-rigth margin borderbiomassa">
+                <h3> <i> 2.4. INIBIÇÃO PELA BIOMASSA </i> </h3>
+                <h4> <i> <b> 2.4.1. Lee et al (1983) </i> </b> </h4>
+                <p>
+                    Em eventos bioquímicos conduzidos segundo o modo de operação em contínuo, lançar mão de
+                    algumas estratégias operacionais faz com que a concentração celular atinja valores elevados
+                    o interior do fermentador, a exemplo do que ocorre quando se utiliza o reciclo de células.
+                    Diante desse cenário, estudos preliminarmente realizados comprovam que, para esses casos, o 
+                    acúmulo de microrganismos chega a ser cerca de 10 a 20 vezes superior quando confrontado 
+                    àquele observado, em termos de concentração de células, em tanques convencionais em batelada, 
+                    bem como em contínuos com ausência de reciclo. 
+                </p>
+                <div class = "container formulas borderformula">
+                    $$
+                    &#x3BC;(t) = {&#x3BC;máx{{Cs\over{Ks+Cs}}{{(1- {Cx\over{Cx*}})}^m}}}
+                    $$
+                    <p><i>
+                        t = Tempo decorrido de cultivo (tempo); </i></p>
+                    <p><i>
+                        &#x3BC; = Taxa específica de crescimento (tempo-¹); </i></p>
+                    <p><i>
+                        &#x3BC;máx = Taxa específica de crescimento máxima (tempo-¹); </i></p>
+                    <p><i>
+                        Cs = Concentração de substrato (massa.volume-¹); </i></p>
+                    <p><i>
+                        Ks = Constante de saturação (massa.volume-¹) </i></p>
+                    <p><i>
+                        Cx*= Concentração celular limite (massa.volume-¹) </i></p>
+                    <p><i>
+                        m = Parâmetro expoente de Lee <i>et al</i> (massa.volume-¹) </i></p>      
+                </div>
+                <br/>
+                <p>
+                    Segundo Lee <i>et al</i> (1983), grande parte dos modelos cinéticos disponíveis para 
+                    consulta na literatura científica estabelece uma relação linear entre o crescimento 
+                    microbiano (em função da taxa &#x3BC;) e da concentração observada, de maneira que caso a 
+                    primeira apresente-se duplicada, o mesmo será observada para a segunda. Um levantamento de
+                    dados feito por Lee e colaboradores indica que tal relação é correta e eficientemente 
+                    aplicada para descrever fermentações que ocorrem em batelada, apresentando concentração de 
+                    biomassa em um intervalo entre 5-10 g/L. Todavia, dados experimentais obtidos por
+                    outros pesquisadores colocaram tal relação linear em xeque, haja visto que a produtividade 
+                    máxima observada pelos mesmos foi alcançada para valores localizados entre 60 e 100 g/L de 
+                    levedura.
+                </p>
+                <p>
+                    Por esta razão, para o tratamento cinético da fermentação ensaiada, Lee <i>et al</i> (1983) 
+                    empregou uma equação para descrever o crescimento microbiano, considerando os efeitos 
+                    inibitórios do acúmulo da biomassa, inserindo um termo análogo ao utilizado para a inibição 
+                    pelo produto utilizada por Levenspiel.
+                </p>
+                <p>
+                    No equacionamento cinético proposto por Lee, o termo “Cx*” indica a concentração celular 
+                    máxima a qual seria alcançada pelo microrganismo em estudo em condições ideais de 
+                    crescimento (fornecimento adequado e suficiente de nutrientes, além da ausência de efeitos 
+                    inibitórios, a exemplo daquele ocasionado pelo acúmulo de etanol acima de determinados 
+                    teores). O termo de potência, “m”, por sua vez, descreve quantitativamente o quão forte está 
+                    sendo a inibição para o crescimento celular em termos da taxa específica &#x3BC;, para casos 
+                    em que a concentração da biomassa, “Cx”, encontra-se inferior à “Cx*”, de modo que para 
+                    valores de “Cx” superiores a “Cx*”, o modelo cinético de Lee et al, para a predição da 
+                    inibição pela biomassa, não encontra-se definido.
+                </p>
+                <br/>  
+            </div>
+        </section>
+        
+        <section id="algoritmos">
+            <div class = "container-fluid algoritmos text-rigth margin">
+                <h3> <i> 3. ALGORITMOS IMPLEMENTADOS </i> </h3>
+                <p>
+                    Os algoritmos desenvolvidos pelo grupo FermenPy foram implementados integral e 
+                    exclusivamente em linguagem Python, tanto para fins de escrita dos códigos-fonte 
+                    <i>(backend)</i> quanto elaboração das interfaces gráficas do tipo <i>"Graphical 
+                    User Interface", GUI </i> <i>(frontend)</i>, através do suporte provido pelas bibliotecas 
+                    cientícas numérica, de otimização e estatísticas, gráfica, de tratamento de dados e 
+                    criação de softwares, respectivamente <i>Numpy, Scipy, Matplotilib, Pandas e Tkinter</i>.
+                </p>
+            </div>
+        </section>
+
+        <section id="integracao numerica">
+            <div class = "container integracao text-rigth margin borderintegracao">
+                <h3> 3.1. INTEGRAÇÃO NUMÉRICA </h3>
+                <p>
+                    O módulo <i>integrate</i>, disponível através da biblioteca Pyhton <i>Scipy</i>, original da 
+                    sigla em inglês <i>“Scientific Python”</i>, provê uma poderosa ferramenta para a 
+                    resolução de sistemas de Equações Diferenciais Ordinárias (EDOs). Para tanto, o mesmo se
+                    vale da implementação do popular software ODEPACK Fortran, depositado no repositório 
+                    <i>Netlib</i>, de modo que ao acionar o comando 
+                    <i>scipy.integrate.odeint(modelo, condição_inical,tempo)</i>, a rotina de alta velocidade
+                    LSODA, desenvolvida em Fortran 77, é acionada como mecanismo de solução computacional 
+                    para um dado sistema de EDOs em estudo, graças ao método de integração numérica de 
+                    <i>Runge-Kutta</i> de segunda ordem, sendo a linguagem Python a mais amigável para a sua 
+                    utilização dessa rotina. 
+                </p>
+            </div>
+        </section>
+
+        <section id="regressao">
+            <div class = "container regressao text-rigth marginregressao borderregressao">
+                <h3> 3.2. REGRESSÃO GRÁFICA </h3>
+            </div>
+        </section>
+
+        <section id="linear">
+            <div class = "container linear text-rigth marginlinear borderlinear">
+                <h4>  <b> 3.2.1. LINEAR </b> </h4>
+                <p>
+                    A regressão linear aproxima um determinado evento (bio)químico experimentado ao comportamento
+                    esperado segundo as leis científicas teóricas a partir da modelagem dos dados obtidos
+                    frente a uma equação de primeira ordem, conhecida vulgarmente por equação da reta. Nessa 
+                    situação, o ajuste possibilita a obtenção de valores para os coeficientes que irão 
+                    caracterizar a expressão que melhor permite a predição quantitativa do experimento 
+                    em estudo, seguindo o perfil matemático esperado e tido como modelo pela ciência. 
+                </p>
+            </div>
+        </section>
+
+        <section id="calibracao">
+            <div class = "container calibracao text-rigth margincalibracao bordercalibracao">
+                
+                <h5> <i> <b> 3.2.1.1. Curva de Calibração </i> </b> </h5>
+                <p>
+                    O pacote <i>Numpy</i>, desenvolvido integralmente em linguagem Python e que carrega como 
+                    sigla em inglês o termo <i>“Numerical Python</i>” disponibiliza, aos usuários e 
+                    programadores desse linguagem emergente e em pleno estágio de ascensão, através da função 
+                    <i>polyfit</i>, uma poderosa ferramenta para ajuste de dados numéricos, o que é possível 
+                    uma vez que a mesma permita que as etapas de otimização sejam conduzidas tendo como base 
+                    equações matemáticas de grau variável. 
+                </p>
+                <p>
+                    Para tanto, essa função implementa o método de convergência conhecido como <i>Método dos 
+                    Mínimos Quadrados</i>, de maneira que o ajuste de dois conjuntos de dados quantitativos 
+                    distintos e reconhecidos pelo algoritmo internamente embutido à mesma reconhece por 
+                    <i>(x, y)</i> resulta em uma saída computacional pelo polyfit de um vetor,
+                    denominado por <i>p</i>, contendo o valor 
+                    de cada um dos coeficientes correspondentes à expressão polinomial que melhor representa o 
+                    evento em processo de ajuste (polinômio de encaixe) para efeitos de resolução de um dado 
+                    problema de minimização do erro ao quadrado entre aquilo que é experimentado e o que é 
+                    ensaiado,  seguindo o perfil característico das expressões matemáticas. 
+                </p>
+                <div class = "container equacaoregressao borderequacaoregressao">
+                    $$
+                    p(x) = p[0] * x^{grau} + ... + p[grau]
+                    $$
+                </div>
+                <br/>
+                <p>
+                    Entretanto, a função <i>polyfit</i> não está isenta de limitações, haja visto que para 
+                    situações nas quais o grau inserido para a realização do ajuste é demasiado elevado ou 
+                    ainda em que o intervalo de pontos amostrais não está adequadamente centralizado 
+                    (apresenta-se muito disperso), os resultados numéricos encontrados para os coeficientes 
+                    encontrado pelo método em questão acabam por ser mal condicionados, não sendo 
+                    satisfatórios e fidedignos à realidade.
+                </p>
+                <center>
+                    <img src = "img/calibracao.png"  ALT="HTML">
+                </center>
+                
+                <div class = "container legenda text-center">
+                    <p><b>
+                        Para a construção da curva de calibração, o grau  inserido para o polinômio
+                        a ser retornado pelo algoritmo deve ser "1",
+                        permitindo o ajuste dos dados de densidade óptica (D.O.) à uma equação de primeiro 
+                        grau. A sintaxe empregada para esse fim, é dada, portanto, pela linha de começando
+                        "<i> numpy.polyfit(xexp,yexp,1)</i>"
+                    </b></p>
+                </div>
+                <p>
+                    Diante desse cenário, o algoritmo emite um aviso (<i>RankWarning</i>) a fim de sinalizar 
+                    que estão ocorrendo problemas de minimização frente ao conjunto de dados fornecidos 
+                    para a situação de ajuste e/ou o grau do polinômio requerido pelo usuário, e, portanto,
+                    que o ajuste mais adequado aos mesmos não está definido, uma vez que existem problemas 
+                    numéricos para a correta e satisfatória aplicação do método dos mínimos quadrados. 
+                </p>
+                <p>
+                    Todavia, existem soluções possíveis a fim de contornar a problemática levantada 
+                    anteriormente e são a certo ponto simples, consistindo em diminuir o grau polinomial 
+                    empregado para a minimização. Com isso, os resultados da otimização podem ser 
+                    aprimorados.  
+                </p>
+            </div>
+        </section>
+
+        <section id="nao linear">
+            <div class = "container nao linear text-rigth margin bordernaolinear">
+                <h4> <b> 3.2.2. NÃO LINEAR </b> </h4>
+                <p>
+                    O módulo <i>Leastsq</i>, uma das ferramentas disponíveis também pelo pacote Python 
+                    <i>Scipy</i>, é composto por dois algoritmos pertencentes à MINPACK, uma biblioteca para 
+                    subrotinas implementadas em linguagem Fortran, denotados por lmdif e lmder e se baseia 
+                    na otimização de equação não lineares aplicando o método da minimização quadrática. 
+                    Esta última é aplicada frente ao cálculo da diferença entre os dados experimentais 
+                    (oriundos de eventos reais experimentados ou ainda do retorno de algoritmos de simulação) 
+                    e aqueles calculados com base em uma dada equação, com grau de liberdade superior a 1, 
+                    que possui os parâmetros a serem otimizados, ambos compondo o que se convencionou nomear 
+                    como função objetiva, na qual estes passam a ser tratados como argumentos, armazenados em 
+                    tuplas e que são recalculados a cada iteração realizada pelo algoritmo, visando à obtenção 
+                    da melhor solução possível. 
+                </p>
+                <p>
+                    Dessa maneira, ao final do processo de convergência implementado pela linha de comando 
+                    <i>scipy.optimize.leastsq()</i>, os valores encontrados para os parâmetros assim 
+                    modelados são retornados na forma de vetores unidimensionais. Entretanto, é válido 
+                    salientar que os valores iniciais, únicos e pontuais, que devem ser fornecidos para os 
+                    mesmos, representando, com isso, o lance inicial, necessário para que o processo de 
+                    convergência seja iniciado, permitem que o módulo passe então a ter uma base numérica 
+                    (na forma de entradas únicas e pontuais) a partir da qual irá iniciar busca pela melhor 
+                    solução para um dado problema de minimização da função objetiva, caracterizando o método 
+                    de convergência local. A utilização do módulo leastsq permite a implementação do 
+                    Algoritmo de Levenberg – Marquardt (ALM) em linguagem Python.
+                </p>
+                <p>
+                    O método de Evolução Diferencial pode ser implementado em linguagem Python através do 
+                    módulo <i>diferencial_evolution</i>, disponibilizado pela biblioteca <i>Scipy</i>, permitindo,
+                    dessa maneira, que a solução mínima global, representada pelos valores dos parâmetros 
+                    componentes de equações multivariadas, seja localizada ao término do processo de 
+                    modelagem computacional dentro de um amplo espaço de busca dentro de um determinado 
+                    intervalo numérico candidato a possuir as possíveis soluções para um dado problema de 
+                    minimização.
+                </p>
+                <p>
+                    Esse método, do tipo estocástico baseado em populações, o qual dita os princípios básicos 
+                    de funcionamento dos Algoritmos Genéticos (AGs), tem-se mostrado de extrema utilidade para 
+                    a utilização em problemas matemáticos que requerem o emprego de ferramentas de otimização 
+                    global para que possam ser solucionados com alto grau de eficiência. Para tanto, o algoritmo 
+                    promove alterações, a cada rodada, nas populações tidas como potenciais candidatas à resolver 
+                    o sistema de equações modelada frente um conjunto de dados de entrada tomados pelo mesmo como 
+                    experimentais e base de comparação aos posteriormente calculados como modelo,  o que culmina 
+                    com a formação de novas populações candidatas que passam então a ser denotadas por candidatas 
+                    a teste. 
+                </p>
+                <p>
+                    Esse mecanismo central é implementado pela adoção de diferentes técnicas disponíveis pelo 
+                    módulo <i>Differential Evolution</i>, as quais, sem exceção, empregam trabalho 
+                    computacional para gerar mudanças nas populações candidatas até que a busca seja filtrada 
+                    à melhor encontrada dentro dos parâmetros fornecidos pelo usuário, como <i>popsize, mutation 
+                    e recombination</i> ou até que um critério específico de parada seja atendido. Contudo, 
+                    a fim de que todo o mecanismo de convergência global seja iniciado, o espaço de busca, uma 
+                    vez vasto, deve ser limitado manualmente frente ao fornecimento dos valores mínimos e 
+                    máximos que formam um intervalo numérico mais provável a acomodar os valores para os 
+                    parâmetros a serem otimizados. 
+                </p>
+                <p>
+                    Contudo, a grande limitação da adoção dos AGs se deve ao fato de que, para muitos 
+                    problemas de minimização, o tempo de resposta torna-se um grande inconveniente, com os 
+                    resultados demorando a serem retornados pelos algoritmos, além de que caso os mesmos não 
+                    sejam corretamente construídos, no que tange aos seus parâmetros intrínsecos e que devem 
+                    ser fornecidos pelo comando <i>“scipy.optimize.differential_evolution()”</i>, os 
+                    resultados da modelagem passam a não ser confiáveis, os quais tornam-se mais fidedignos à 
+                    medida que valores altos para o <i>popsize e mutation</i>, com baixo recombination melhoram as 
+                    chances em encontrar um um mínimo global. 
+                </p>
+                <p>
+                    Porém, a convergência acaba por ser afetada, o que implica na necessidade em se adotar 
+                    métodos de convergência local em consonância ao AG. Em adição, o emprego do comando 
+                    <i>updating=imadiatte”</i>“ implica em uma redução no tempo de convergência pelo AG, em 
+                    decorrência de atualizações consecutivas dos cromossomos contendo as melhores soluções 
+                    dentro de uma única iteração do algoritmo.
+                </p>
+            </div>
+        </section>
+
+        <section id="AG">
+            <div class = "container ag text-rigth margin borderag">
+                <h5> <i> <b> 3.2.2.1. Algoritmo Genético (AG) </i> </b> </h5>
+                <p>
+                    O Algoritmo Genético, representado também através da sigla AG, é considerado uma técnica 
+                    helenística, fornecendo a melhor solução possível para um dado problema de minimização, 
+                    em um período de tempo relativamente hábil. Contudo, existem casos nos quais os resultados 
+                    otimizados retornados pelo mesmo não são os mais adequados à problemática modelada.
+                </p>
+                <p>
+                    Seu mecanismo de funcionamento característico apresenta derivações acerca da famosa 
+                    Evolução das Espécies, de maneira que é possível entende-lo por intermédio de uma 
+                    analogia simples realizada em relação a termos comumente empregados na área da genética.
+                    Diante desse cenário multidisciplinar, que atrela biologia, engenharia e computação, 
+                    cada conjunto de soluções candidatas é representativo de um <b>cromossomo</b>, de modo que seus 
+                    <b>genes</b> são constituídos por números, ou seja, um cromossomo é uma cadeia de binários 
+                    (0 e 1).  Assim, essas cadeias de números, as quais estão susceptíveis ao processo de 
+                    <b>permutação</b> pelo algoritmo, quando em conjunto, dão origem às <b>populações</b>, 
+                    sendo estas últimas geradas e manipuladas a cada iteração sofrida pelo AG, 
+                    originando as diferentes <b>gerações</b> de cromossomos, todos avaliados 
+                    estatisticamente por intermédio da <i>função de avaliação fitness</i>, responsável em 
+                    mensurar o qual adaptada está a solução carregada em seus genes à minimização da função 
+                    objetiva.
+                </p>
+                <div class = container video>
+                    <center>
+                        <video video width="600"  controls="controls" autoplay="autoplay"
+                        <source src="video/AlgoritmoGenetico.mp4" type="video/mp4">
+                        <object data="" width="600" >
+                        <embed width="600"  src="video/AlgoritmoGenetico.mp4">
+                        </object>
+                        </video>
+                </center>
+                </div>
+                <div class = "container legenda text-center">
+                    <p><b>
+                        Vídeo retirado do link <a href="https://www.youtube.com/watch?v=FYF6lS_BHKA"
+                        target = "_blank">
+                        https://www.youtube.com/watch?v=FYF6lS_BHKA</a>
+                    </b> </p>
+                </div>
+                <p>
+                    Tudo isso acontece em 5 fases distintas:
+                </p>
+                <p>
+                    <b>1)</b>	Geração da população inicial;
+                </p>
+                <p>
+                    <b>2)</b>	Cálculo do <i>fitness</i> para cada um dos cromossomos que a compõem;
+                </p>
+                <p>
+                    <b>3)</b>	Seleção, <i>crossover</i> (recombinação) e mutação;
+                </p>
+                <p>
+                    <b>4)</b>	Troca de populações, originado as novas gerações;
+                </p>
+                <p>
+                    <b>5)</b>	O processo é repetido a partir da fase 2, até que o critério de parada 
+                    (seja projetado para permitir a obtenção de uma solução satisfatória ou ainda apenas 
+                    relacionada ao tempo de execução do AG) seja atendido ou algum problema seja detectado 
+                    pelo algoritmo.
+                </p>
+                <p>
+                    <b><i>Resultado:</i></b> o melhor indivíduo é componente intrínseco da última geração da população.
+                </p>
+                <p>
+                    A etapa de seleção detecta, através do valor calculado para o parâmetro fitness os 
+                    cromossomos mais adaptados, sendo que o mesmo pode ser selecionado mais de uma vez; 
+                    a de crossover se encarrega de mesclar genes (valores numéricos) de dois cromossomos 
+                    distintos, representando um evento probabilístico; por fim, a etapa de mutação, também 
+                    assim classificada, soluciona possíveis entraves relacionados à detecção de valores 
+                    mínimos locais, sendo os cromossomos mutados lançados à geração seguinte. Ambas as 
+                    últimas etapas são dependentes dos chamados <i>operadores genéticos</i>, definidos 
+                    através da codificação do AG.
+                </p>
+                <p>
+                    A determinação do tamanho da população pelo <i>differential evolution</i>, do inglês
+                    <i>popsize</i>, irá influenciar diretamente a população inicial e consequente nas 
+                    gerações futuras e, dessa maneira, em toda a performance do algoritmo, não podendo, 
+                    portanto, ser muito grande ou muito pequena. 
+                </p>
+            </div>
+        </section>
+    
+        <section id="ALM">
+            <div class = "container alm text-rigth margin borderalm">
+                <h5> <i> <b> 3.2.2.2. Algoritmo de Levenberg - Marquardt (ALM) </i> </b> </h5>
+                <p> 
+                    O Algoritmo de Levenberg – Marquardt, por vezes abreviado, seguindo a língua portuguesa, 
+                    como ALM, é comumente implementado para a resolução de muitos problemas matemáticos 
+                    complexos que envolvem a minimização não linear pelo método dos mínimos quadrados, 
+                    sendo a ferramenta computacional empregada para fins de otimização de processos em 
+                    <i>softwares</i> especializados para a realização das etapas de convergência 
+                    intrínsecas a esses eventos.
+                </p>
+                <div class = container video>
+                    <center>
+                        <video video width="600"  controls="controls" autoplay="autoplay"
+                        <source src="video/LevenbergMarquardt.mp4" type="video/mp4">
+                        <object data="" width="600" >
+                        <embed width="600"  src="video/AlgoritmoGenetico.mp4">
+                        </object>
+                        </video>
+                </center>
+                </div>
+                <div class = "container legenda text-center">
+                    <p><b>
+                        Vídeo retirado do link <a href="https://www.reddit.com/r/dataisbeautiful/comments/bfsw4a/nonlinear_curve_fitting_using_the/"
+                        target = "_blank">
+                        https://www.reddit.com/r/dataisbeautiful/comments/bfsw4a/nonlinear_curve_fitting_using_the/</a>,
+                        ilustrando um exemplo de implementação computacional do Algoritmo de Levenberg - 
+                        Marquardt, o qual realiza o processo de convergência local para uma equação não linear
+                        através de suas múltiplas
+                        iterações.
+                    </b> </p>
+                </div>
+                <p>
+                    Contudo, muito embora represente uma das alternativas mais adotadas para esse fim e 
+                    forneça respostas que exigem um tempo de trabalho computacional muito reduzido 
+                    (a resposta é retornada em questão de segundos), o algoritmo é demarcado por algumas 
+                    problemáticas que colocam a sua utilização em xeque, uma vez que o mesmo não apresenta 
+                    eficiência e resposta adequadas para todas as situações que necessitem do processo de 
+                    modelagem computacional para equações do tipo não lineares. 
+                </p>
+                <p>
+                    Esse cenário limitante ao qual o ALM é inserido é criado devido ao seu mecanismo de 
+                    funcionamento característico, o qual para ser iniciado, necessita do fornecimento manual 
+                    os valores iniciais para os parâmetros componentes da(s) expressão(ões) matemática(s) a 
+                    ser(em) otimizadas através da minimização da <i>função objetiva</i>, os quais, uma vez 
+                    fornecidos pelo usuário ou programador, que podem apresentar pouco ou nenhum conhecimento 
+                    acerca da teoria científica descrita matematicamente pelas equações, são passíveis de ser 
+                    muito distantes do esperado no cenário real. 
+                </p>
+                <p>
+                    Diante disso, o algoritmo passa a estar susceptível ao retorno de valores errôneos para o 
+                    evento modelado, ao final do processo de convergência local, realizado pela aplicação de 
+                    uma função única, baseada no número de pontos a ser modelado, o valor dos dados 
+                    experimentais e também computados, bem como um fator de ponderação, além da própria 
+                    expressão matemática que representa o modelo de minimização em estudo, o qual passa a ser 
+                    tomado como equação modelo para a realização do processo de convergência. 
+                </p>
+                <div class = "container equacaoregressao borderequacaoregressao">
+                    $$
+                    \sum_{i=1}^{i=n} wi*{(Yi-yi)}^2;
+                    $$
+                    $$
+                    yi = f(Xi) = f(Xi,a1...ap)
+                    $$
+                </div>
+                <p>
+                <br/>
+                    Assim, todas essas questões levantadas e discutidas sugerem que ideia de que o 
+                    acoplamento do ALM com outras ferramentas computacionais científicas, a exemplo de 
+                    algoritmos de otimização por minimização de equações não lineares e que realizam uma 
+                    busca global de possíveis soluções para a problemática a ser modelada pode não apenas 
+                    contornar todas as limitações do Algoritmo de Levenberg – Marquardt, como enaltecer sua 
+                    vantagem, centrada em seu método de convergência local, como potencializar aqueles que 
+                    buscam as melhores soluções, no âmbito estatístico, dentro de um vasto intervalo numérico. 
+                    Tem-se como exemplo deste último o Algoritmo Genético (AG).
+                </p>
+            </div>
+        </section>
+
+        <section id="referencias">
+            <div class = "container-fluid referencias text-rigth margin borderreferencias">
+            <h2> REFERÊNCIAS BIBLIOGRÁFICAS </h2>
+            <p>
+                
+            </p>
+        </div>
+    </section>
+
+        <section id="contatos">
+                <div class = "container-fluid contatos text-rigth margin bordercontatos">
+                <h2> CONTATOS </h2>
+                <img src = "img/email.jpg" width = 50px>
+                <a  href = "mailto:bruna.quiterio@unesp.br" style="color:black">bruna.quiterio@unesp.br </a>
+            </div>
+        </section>
+        
+    </body>
+    
+    
+    <footer>
+        <div class = "container-fluid rodape text-rigth margin borderrodape">
+            <p>Projeto de pesquisa apoiado por:</p>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-lg-4">
+                        <a href ="https://www2.unesp.br/" target = "_blank">
+                            <img src = "img/unesp.gif" width="200px">   
+                        </a>
+                    </div>
+                    <div class = "col-lg-4">
+                        <a href ="http://www.fapesp.br/" target = "_blank">
+                            <img src = "img/fapesp.png" width="200px">  
+                        </a> 
+                    </div>
+                    <div class = "col-lg-4">
+                        <a href = "https://www2.ufscar.br/" target = "_blank">
+                            <img src = "img/ufscar.png" width="200px">   
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <h6> <b> Última atualização em 12/06/2020 14:09 </b> </h6>
+        </div>
+
+    </footer>
+
+    
+</html>
