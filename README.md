@@ -1,2 +1,2 @@
-## Página web para documentação (batelada) desenvolvida em HTML5 e CSS3 com auxílio da framework Bookstrap
+## Página web para documentação (batelada) desenvolvida em HTML5 e CSS3 com auxílio da framework Bootstrap
 ### Link para acesso: https://brunaaq.github.io/Documentacao_fermenpy/
