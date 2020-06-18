@@ -653,6 +653,10 @@ p {
     font-size: 16px;
     color: black;
 }
+.saidas_calibrapy p {
+    font-family: monospace;
+    font-size: 15px;
+}
 .fermenpy h6 {
     font-family: monospace;
     font-size: 16px;
