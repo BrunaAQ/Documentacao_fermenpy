@@ -142,8 +142,9 @@
             <div class = "container-fluid pesquisa text-rigth margin borderpesquisa">
                 <h2> NOSSA PESQUISA </h2>
                 <p>
-                    Nosso projeto científico, financiado pela agência de fomento FAPESP (Fundação de Amparo à 
-                    Pesquisa do Estado de São Paulo), tem como foco central o desenvolvimento de algoritmos 
+                    Nossa pesquisa científica, financiado pela agência de fomento FAPESP (Fundação de Amparo à 
+                    Pesquisa do Estado de São Paulo), como projeto de Iniciação Científica (Nº 2019/24737-9),
+                    tem como foco central o desenvolvimento de algoritmos 
                     integralmente em linguagem Python, com o intuito de, através do desenvolvimento
                     de interfaces gáficas (GUIs) e, futuramente de plataformas <i>on-line</i> disponiblizar, 
                     de maneira facilitada, clara, dinâmica e didática, 
@@ -325,40 +326,7 @@
                     reacional, sendo rx a velocidade com a qual ocorre o processo de crescimento microbiano 
                     (r = &#x3BC;) e rdx o de morte celular, sendo Kd a constante que recebe o mesmo nome
                     e é definida segundo a mesma grandeza da taxa &#x3BC;.
-                    A integração analítica da diferencial destacada, para um dado intervalo de 
-                    tempo de cultivo iniciado em t = 0 e finalizado em t = t´ permite a quantificação direta 
-                    de Cx para um valor de tempo definido, de modo que a integração analítica pode ser 
-                    realizada através do método de separação de variáveis, considerando que o valor de &#x3BC; 
-                    será considerado constante para fins de simplificação dos cálculos.
                 </p>
-                <div class = "container formulas text-left borderformula">
-                    $$
-                    {1\over{Cx}} = &#x3BC;.dt
-                    $$
-                    $$
-                    \int_{Cx0}^{Cx} {1\over{Cx}}\, dCx = \int_{0}^{t'} &#x3BC;\, dt 
-                    $$
-                    $$
-                    \int_{Cx0}^{Cx} {1\over{Cx}}\, dCx = &#x3BC;.\int_{0}^{t'} \, dt 
-                    $$
-                    $$
-                    ln⁡[(Cxf)-ln⁡(Cxo)= µ .(t´-0)]
-                    $$
-                    $$
-                    ln({Cx0\over{Cx}}) = &#x3BC;.t'
-                    $$
-                    <div class = "container formulasfinais borderformulasfinais">
-                        $$
-                        e^{(&#x3BC;.t')} = {Cxf\over{Cx}}
-                        $$
-                    </div> 
-                </div>
-                <p>
-                    <br/>
-                    A equação final integrada também pode ser obtida pela criação e execução de algoritmo de 
-                    programação em Python, o qual integra implementa técnicas de integração numérica, 
-                    não mais analítica. 
-                    </p>
             </div>
 
             <div class = "container balancocs borderbalancocs marginbalancocs">
@@ -720,6 +688,43 @@
                         em batelada.
                     </b> </p>
                 </div>
+                <p>
+                    A integração analítica da diferencial destacada na seção 1.1.1, para um dado intervalo de 
+                    tempo de cultivo iniciado em t = 0 e finalizado em t = t´ permite a quantificação direta 
+                    de Cx para um valor de tempo definido, de modo que a integração analítica pode ser 
+                    realizada através do método de separação de variáveis, considerando que o valor de &#x3BC; 
+                    será considerado constante para fins de simplificação dos cálculos.
+                </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    {1\over{Cx}} = &#x3BC;.dt
+                    $$
+                    $$
+                    \int_{Cx0}^{Cx} {1\over{Cx}}\, dCx = \int_{0}^{t'} &#x3BC;\, dt 
+                    $$
+                    $$
+                    \int_{Cx0}^{Cx} {1\over{Cx}}\, dCx = &#x3BC;.\int_{0}^{t'} \, dt 
+                    $$
+                    $$
+                    ln⁡[(Cxf)-ln⁡(Cxo)= µ .(t´-0)]
+                    $$
+                    $$
+                    ln({Cx0\over{Cx}}) = &#x3BC;.t'
+                    $$
+                    <div class = "container formulasfinais borderformulasfinais">
+                        $$
+                        e^{(&#x3BC;.t')} = {Cxf\over{Cx}}
+                        $$
+                    </div> 
+                </div>
+                <p>
+                    <br/>
+                    A equação final integrada também pode ser obtida pela criação e execução de algoritmo de 
+                    programação em Python, o qual integra implementa técnicas de integração numérica, 
+                    não mais analítica e inidica que, para um mesmo intervalo de tempo e concentração inicial
+                    e final de células observada no cultivo em análise, quanto maior a taxa de crescimento, 
+                    maior será o acúmulo de biomassa, o qual obedece à uma lei matemática exponencial. 
+                </p>
                 <p>
                     Entretanto, é válido ressaltar que a velocidade de crescimento é direta e invariavelmente 
                     influenciada pela temperatura segundo a qual a biotransformação está sendo conduzida e pode,
@@ -1171,6 +1176,24 @@
                     <i>Runge-Kutta</i> de segunda ordem, sendo a linguagem Python a mais amigável para a sua 
                     utilização dessa rotina. 
                 </p>
+                <div class = "container formulas text-left borderformula">
+                    $$
+                    {d (Cx)\over {dt}} = {(&#x3BC-Kd).Cx} 
+                    $$
+                    $$
+                    {d (Cs)\over {dt}} =  {{-1\over{Yxs}}.&#x3BC;.Cx}
+                    $$
+                    $$
+                    {d (Cp)\over {dt}} = {(&#x3B1;.&#x3BC;+&#x3B2;).Cx}
+                    $$
+                </div>
+                <div class = "container legenda text-center">
+                    <p><b>
+                        Sistema de equações não lineares integrados numerica e computacionalmente com o módulo
+                        odeint componentes dos algoritmos da pesquisa Fermenpy, sendo a taxa &#x3BC; descrita
+                        pelos modelos cinéticos preditivos não estruturados elencados na seção 2.
+                    </b></p>
+                </div>
             </div>
         </section>
 
