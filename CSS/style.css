@@ -5,10 +5,10 @@ body {
 }
 
 h2 {
-    font-family: ar cena; 
+    font-family: Bahnschrift SemiBold; 
 }
 h3 {
-    font-family: ar cena;
+    font-family: Bahnschrift SemiBold;
 }
 
 
@@ -403,6 +403,11 @@ p {
     border-top-style: solid;
     border-top-color: #000;
 }
+.border_em_breve {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+}
 
 .email{
     color:black;
@@ -694,7 +699,3 @@ p {
     border-right-style: solid;
     border-right-color: white;
 }
-
-
-
-
