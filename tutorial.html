@@ -224,11 +224,11 @@
                 <p> <h6> <b> <br/> FIQUE ATENTA(O)! 
                     As entradas numéricas que devem ser fornecidas manualmente através da interface de
                     usuário, caso sejam do tipo ponto flutuante (números decimais), devem ser representados
-                    por pontos (.), ao invés de vérgulas (,). Ainda, se você se deparar com uma situação
+                    por pontos (.), ao invés de vírgulas (,). Ainda, caso se depare com uma situação
                     na qual os botões não se apresentem na cor verde em qualquer uma das seções, por favor, 
                     confira se a entrada de dados está adequada e condiz com o número de leituras que deseja
                     submeter à análise pelo Calibrapy. A grandezas dimensional segundo as quais a concentração
-                    de biomassa será tratada pelo programa (massa.volume-¹), irá depender exclusivamente àquela
+                    de biomassa será tratada pelo programa (massa.volume-¹), irá depender exclusivamente daquela
                     reresentada pelos valores importados ao <i>software</i>. O guia aqui ilustrado faz alusão
                     a dados que obedecem a relação g.L-¹.
                 </b></p> </h6>
@@ -238,11 +238,85 @@
         <section id="fermenpy">
             <div class = "container fermenpy margin_fermenpy border_fermenpy">
                 <h4> <b> <i> Fermenpy </b> </i> </h4>
-                <h6> Funcionalidade: </h6>
-                <h6> Descrição: </h6>
-                <h6> Sistema de alimentação: </h6>
-                <h6> Saídas retornadas: </h6>
-                <h6> <b> Fique atenta(o)! </b> </h6>
+                <h6> <b>Funcionalidade:</b> Simulação automatizada de processos fermentativos microbianos conduzidos
+                     em modo de operação batelada descritos por diferentes modelos cinéticos não estruturados e 
+                     modelagem dos parâmetros cinéticos a eles envolvidos.
+                 </h6>
+                <h6> <b>Informações técnicas:</b> 
+                    O <i> software </i> foi desenvolvido integral e unicamente em linguagem Python,
+                    seguindo o modelo GUI (<i>Graphical User Interface</i>),
+                    projetado através de ferramentas de <i> Front End </i> disponibilizadas pela biblioteca
+                    Tkinter e conta com uma divisão em três seções distintas para melhor permitir a sua
+                    exploração.
+                    <br/>
+                    <br/>
+                    <div class = "container fermenpy_simulacao margin_fermenpy_simulacao border_fermenpy_simulacao">
+                        <b>Seção 1) Simulação:</b> 
+                        <br/>
+                        <b>Algoritmo:</b> Aplica função odeint (pacote científico Scipy) responsável pela 
+                        implementação do método de Runge-Kutta com o intuito de integrar numérica e computacionalmente
+                        o sistema de equações ordinárias não linear preditivo da dinâmica cinética atrelada aos 
+                        bioprocessos passíveis de análise pelo programa, tendo variadas opções para a descrição matemática-
+                        temporal da taxa específica de crescimento que contemplam os modelos não estruturados de Monod, Contois,
+                        Moser, &#x3BC; constante (empregados na caracterização de cultivos não afetados por nenhum tipo de 
+                        efeito inibitório), Aiba <i>et al.</i>, Hoppe & Hansford, Levenspiel (os quais prevêem o potencial 
+                        de inibição apresentando em decorrência do acúmulo de metabólitos extracelulares no meio 
+                        reacional), Andrews, Wu <i>et al.</i> (predição do efeito tóxico exercido pelo substrato ao crescimento
+                        celular) e Lee <i>et al.</i> (proposto na tentativa de se avaliar a influência do acúmulo de 
+                        biomassa no interior do fermentador no que tange à velocidade de crescimento celular).
+                        <br/>
+                        <b>Sistema de alimentação:</b> Os valores numéricos a serem atribuídos a cada constante cinética
+                        componente do modelo cinético não estruturado selecionado, assim como às variáveis operacionais 
+                        (condições iniciais requeridas na etapa de integração numérica) são fornecidos ao <i>software</i>
+                        por inserção manual nos campos apropriados para tanto, devendo as casas decimais serem indicadas por
+                        ponto (.) e nunca vírgula (,).
+                        <br/>
+                        <b>Saídas retornadas</b>: A dinâmica de variação temporal de toda a matéria envolvida no bioprocesso 
+                        simulado, referentes às concentrações celular, de substrato e de produto, de maneira análoga ao observado 
+                        para as produtividas (de biomassa, do produto e específica-esta uma relação entre ambas as variáveis 
+                        anteriores) e a taxa de crescimento &#x3BC; é graficamente retornada ao usuário diretamente através da 
+                        interface projetada (com figuras que podem ser personalizadas quanto às cores por elas carregas ou ainda
+                        baixadas na máquina de operação do programa) estando também disponível para <i>download</i> segundo a forma
+                        de planilhas eletrônicas em extensão <i>.xlsx</i>.
+                        <br/>
+                        <br/>
+                        <b>Seção 2) Modelagem</b>
+                        <br/>
+                        <b>Algoritmos:</b> O ajuste matemático aplicado aos dados experimentais, ou simulados,
+                        frente a um modelo cinético preditivo selecionado é feito por implementação de algoritmo
+                        híbrido o qual acopla mecanismos de convergência global (por meio do emprego do Algoritmo
+                        Genético, construído através do módulo <i>differential evolution</i>) e local (garantido 
+                        pelo Algoritmo de Levenberg-Marquardt, implementado pela função Python <i>leastsq</i>), 
+                        provendo uma ferramenta potente de modelagem computacional aos usuários.
+                        <br/>
+                        <b>Sistema de alimentação:</b> À semelhança do adotado na construção da interface 
+                        Calibrapy, o conjunto de dados a ser submetido à modelagem computacional pelo programa 
+                        Fermenpy deve atender à disposição requerida por um <i>template</i> disponível para acesso
+                        na seção "Modelagem". O arquivo formato <i>.xlsx</i> assim construído pode ser importado para
+                        a interface de qualquer <i>path</i> de escolha do utilizador, sem restrição alguma. 
+                        <br/>
+                        <b>Saídas retornadas:</b> O mesmo perfil de saída traçado na etapa de simulação é aqui disponibilizado,
+                        com a única diferença de que os resultados calculados pelo algoritmo de convergência global-local 
+                        indicarão a aproximação obtida entre os dados modelados e àqueles empregados de entrada do sistema. Os 
+                        parâmetros cinéticos estimados computacionalmente ficam disponíveis para consulta por sua impressão direta
+                        na interface, bem como para <i>download</i> em arquivos <i>.xlsx</i>, da mesma forma que o observado
+                        para os valores de retorno relacionados ao coeficiente estatístico R² e intervalos de confianção (de 95%)
+                        associados às constantes otimizadas (estes últimos passíveis de acesso em janelas internas à principal
+                        componente do programa).
+                        <br/>
+                        <h6> <b> Fique atenta(o)! </b> Erros de execução do Fermenpy estão relacionados
+                        à entrada incorreta dos dados de alimentação. Caso ocorram, a alimentação do <i>
+                        software</i> deve ser revisada e corrigida e tudo voltará ao normal.
+                        </h6>
+                        <br/>
+                        <b>Seção 3) Documentação:</b> Esta área foi reservada à disposição de informações
+                        técnicas e teóricas sucintas, porém suficientes, para a localização do usuário leitor
+                        frente aos conceitos implemetados na construção da interface. Cada uma das subseções aqui
+                        dispostas direcionam automaticamente às correspondentes deste site <i>site</i>, desde
+                        que o computador tenha possibilidade de acesso à rede de internet. 
+
+                    <div/>
+                </h6>   
             </div>
     </section>
 
