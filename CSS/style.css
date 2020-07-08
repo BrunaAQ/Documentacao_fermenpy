@@ -674,6 +674,7 @@ p {
 }
 .margin_fermenpy {
     padding-top:10px;
+    padding-bottom: 50px;
 }
 .border_calibrapy {
     border-top-width: 4px;
@@ -704,5 +705,9 @@ p {
     margin-left: 30px;
 }
 
+.margin_video {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
