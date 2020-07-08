@@ -143,15 +143,15 @@
                     <i>Microsoft</i> Excel são importadas para a interface por meio de um explorador de 
                     arquivos (lançado pelo subpacote <i>askopenfilename</i>).
                 </p> </h6>
-                <div class = container video>
+                <div class = "container video margin_video">
                     <center>
-                        <video video width="600"  controls="controls" autoplay="autoplay"
-                        <source src="video/Calibrapy.webm" type="video/webm">
+                        <video video width="600"  controls="controls" autoplay="autoplay">
+                        <source src="video/Calibrapy_demostracao.mp4" type="video/mp4">
                         <object data="" width="600" >
-                        <embed width="600"  src="video/Calibrapy.webm">
+                        <embed width="600"  src="video/Calibrapy_demostracao.mp4">
                         </object>
                         </video>
-                </center>
+                    </center>
                 </div>
                 <p> <h6> <b> Sistema de alimentação: </b>
                     O correto e pleno funcionamento do Calibrapy requer o fornecimento rigorosamente acertivo
@@ -195,12 +195,12 @@
                     <p> <b>1)</b> Gráfico de dispersão (com adição do desvio padrão quando em situação conveniente
                         - leituras múltiplas); </p>
                     <center>
-                        <img src="img/calibracao._calibrapy.png" ALT = HTML>
+                        <img src="img/regressao_linear.png" ALT = HTML>
                     </center>  
                     <p> <br/> <b>2)</b> Valores para os coeficientes angular e linear (equação da reta lançada na 
                         interface), bem como o R² calculado pelo polyfit); </p> 
                     <center>
-                        <img src="img/regressao_linear.png" ALT = HTML>
+                        <img src="img/Saida_calibrapy_interface.PNG" ALT = HTML>
                     </center> 
                     <p> <br/> <b>3)</b> Arquivo eletrônico (Excel "Media_desvio_leituras"), contendo 
                         os valores médios e de desvio padrão para 
@@ -212,13 +212,18 @@
                     <center>
                         <img src="img/calibrapy_media_desvio.png" ALT = HTML>
                     </center> 
-                    <p> <br/> <b>4)</b> Arquivo eletrônico (Excel "Concentracao_celular"), contendo 
+                    <p> <br/> <b>4)</b> Arquivo eletrônico (Excel "Concentracao_celular")
+                        e figura gráfica contendo 
                         os valores retornados para Cx e os de D.O. relacionados 
                         (alimentação do algoritmo através da
                         seção "Quantificar biomassa"), através da planilha <i>D.O._Cx_exp</i>, passíveis
                         das mesmas funcionalidades dispostas no item anterior. </p>
                     <center>
                         <img src="img/calibrapy_cx.png" ALT = HTML>
+                    </center> 
+                    <center>
+                        <br/>
+                        <img src="img/grafico_cx_do.png" ALT = HTML>
                     </center> 
                 </div>
                 <p> <h6> <b> <br/> FIQUE ATENTA(O)! 
@@ -247,13 +252,22 @@
                     seguindo o modelo GUI (<i>Graphical User Interface</i>),
                     projetado através de ferramentas de <i> Front End </i> disponibilizadas pela biblioteca
                     Tkinter e conta com uma divisão em três seções distintas para melhor permitir a sua
-                    exploração.
-                    <br/>
-                    <br/>
+                    exploração. Implementa as bibliotecas gráfica, numérica, de tratamento de dados e de
+                    exploração de arquivos adotadas na construção algoritmica do <i>software</i> Calibrapy.
+                    <div class = "container video margin_video">
+                        <center>
+                            <video video width="700"  controls="controls" autoplay="autoplay"
+                            <source src="video/Fermenpy_demostracao.webm" type="video/webm">
+                            <object data="" width="700" >
+                            <embed width="700"  src="video/Fermenpy_demostracao.webm">
+                            </object>
+                            </video>
+                        </center>
+                    </div>
                     <div class = "container fermenpy_simulacao margin_fermenpy_simulacao border_fermenpy_simulacao">
                         <b>Seção 1) Simulação:</b> 
                         <br/>
-                        <b>Algoritmo:</b> Aplica função odeint (pacote científico Scipy) responsável pela 
+                        <b>Algoritmo:</b> Aplica a função odeint (pacote científico <i>Scipy</i>) responsável pela 
                         implementação do método de Runge-Kutta com o intuito de integrar numérica e computacionalmente
                         o sistema de equações ordinárias não linear preditivo da dinâmica cinética atrelada aos 
                         bioprocessos passíveis de análise pelo programa, tendo variadas opções para a descrição matemática-
@@ -265,11 +279,16 @@
                         celular) e Lee <i>et al.</i> (proposto na tentativa de se avaliar a influência do acúmulo de 
                         biomassa no interior do fermentador no que tange à velocidade de crescimento celular).
                         <br/>
+                        <br/>
                         <b>Sistema de alimentação:</b> Os valores numéricos a serem atribuídos a cada constante cinética
                         componente do modelo cinético não estruturado selecionado, assim como às variáveis operacionais 
                         (condições iniciais requeridas na etapa de integração numérica) são fornecidos ao <i>software</i>
                         por inserção manual nos campos apropriados para tanto, devendo as casas decimais serem indicadas por
                         ponto (.) e nunca vírgula (,).
+                        <center>
+                            <br/>
+                            <img src="img/entrada_dados_simulacao_fermenpy.PNG" width = 300px ALT = HTML>
+                        </center> 
                         <br/>
                         <b>Saídas retornadas</b>: A dinâmica de variação temporal de toda a matéria envolvida no bioprocesso 
                         simulado, referentes às concentrações celular, de substrato e de produto, de maneira análoga ao observado 
@@ -278,6 +297,10 @@
                         interface projetada (com figuras que podem ser personalizadas quanto às cores por elas carregas ou ainda
                         baixadas na máquina de operação do programa) estando também disponível para <i>download</i> segundo a forma
                         de planilhas eletrônicas em extensão <i>.xlsx</i>.
+                        <center>
+                            <br/>
+                            <img src="img/Saidas_fermenpy_simulacao.png" width = 800px ALT = HTML>
+                        </center> 
                         <br/>
                         <br/>
                         <b>Seção 2) Modelagem</b>
@@ -289,20 +312,56 @@
                         pelo Algoritmo de Levenberg-Marquardt, implementado pela função Python <i>leastsq</i>), 
                         provendo uma ferramenta potente de modelagem computacional aos usuários.
                         <br/>
+                        <br/>
                         <b>Sistema de alimentação:</b> À semelhança do adotado na construção da interface 
                         Calibrapy, o conjunto de dados a ser submetido à modelagem computacional pelo programa 
                         Fermenpy deve atender à disposição requerida por um <i>template</i> disponível para acesso
                         na seção "Modelagem". O arquivo formato <i>.xlsx</i> assim construído pode ser importado para
                         a interface de qualquer <i>path</i> de escolha do utilizador, sem restrição alguma. 
                         <br/>
+                        <center>
+                            <br/>
+                            <img src="img/entrada_dados_modelagem_fermenpy.png" width = 400px ALT = HTML>
+                        </center> 
+                        <div class = "container legenda text-center">
+                            <p><b>
+                                <i>Template</i> fornecido para a correta entrada de dados ao sistema é demostrado
+                                à esquerda, com exemplo de preenchimento correspondente à direita. As planilhas
+                                que acomodam os dados numéricos devem estritamente estar nomeadas por
+                                <i>"C_t_exp"</i>. IMPORTANTE frisar que a cada importação de arquivo feita, é
+                                necessário pressionar o botão "PRONTO", a fim de que os novos dados inseridos 
+                                sejam vetorizados para tratamento pelo algoritmo, mesmo que a modelagem seja
+                                feita seguindo o mesmo modelo cinético anteriormente selecionado.
+                            </b> </p>
+                        </div>
+                        <br/>
                         <b>Saídas retornadas:</b> O mesmo perfil de saída traçado na etapa de simulação é aqui disponibilizado,
                         com a única diferença de que os resultados calculados pelo algoritmo de convergência global-local 
                         indicarão a aproximação obtida entre os dados modelados e àqueles empregados de entrada do sistema. Os 
                         parâmetros cinéticos estimados computacionalmente ficam disponíveis para consulta por sua impressão direta
                         na interface, bem como para <i>download</i> em arquivos <i>.xlsx</i>, da mesma forma que o observado
-                        para os valores de retorno relacionados ao coeficiente estatístico R² e intervalos de confianção (de 95%)
+                        para os valores de retorno relacionados ao coeficiente estatístico R², intervalos de confiança (de 95%)
                         associados às constantes otimizadas (estes últimos passíveis de acesso em janelas internas à principal
-                        componente do programa).
+                        componente do programa) e o tempo de trabalho computacional exigido para a realização do processo 
+                        de convergência.
+                        O <i>software</i> emite ainda um aviso sonoro (apenas quando
+                        executado com base no sistema operacional <i>Windows</i>) quando os parâmetro estimados
+                        apresentam valores não adequados à faixa predita pela literatura, os quais podem ser 
+                        destacados na interface caso o usuário opte por usufruir desse recurso adicional.
+                        <br/>
+                        <center>
+                            <br/>
+                            <img src="img/Saidas_fermenpy_modelagem.png" width = 900px ALT = HTML>
+                        </center> 
+                        <div class = "container legenda text-center">
+                            <p><b>
+                                Saídas gráficas retornadas pelo algoritmo de otimização híbrido AG-ALM, acompanhada
+                                pelas planilhas que armazenam todos os dados por elas plotados, bem como os valores
+                                calculados para o coeficiente R² e o tempo de trabalho algorítmo requerido (imagem
+                                superior esquera), bem como os parâmetros cinéticos estimados e seus respectivos
+                                intervalos de confiança associados.
+                            </b> </p>
+                        </div>
                         <br/>
                         <h6> <b> Fique atenta(o)! </b> Erros de execução do Fermenpy estão relacionados
                         à entrada incorreta dos dados de alimentação. Caso ocorram, a alimentação do <i>
@@ -314,7 +373,10 @@
                         frente aos conceitos implemetados na construção da interface. Cada uma das subseções aqui
                         dispostas direcionam automaticamente às correspondentes deste site <i>site</i>, desde
                         que o computador tenha possibilidade de acesso à rede de internet. 
-
+                        <center>
+                            <br/>
+                            <img src="img/documentacao_fermenpy.PNG" width = 900px height = 420px ALT = HTML>
+                        </center> 
                     <div/>
                 </h6>   
             </div>
