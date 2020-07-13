@@ -624,6 +624,13 @@ p {
     height: 35px;
     padding-top: 8px;
 }
+.tut_destaque {
+    color: black;
+    background-color:white;
+    height: 35px;
+    padding-top: 8px;
+    padding-bottom: 87px;
+}
 .tut_descricao h5 {
     font-size: 17px;
 }
@@ -631,6 +638,11 @@ p {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+.border_tut_destaque {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: black;
