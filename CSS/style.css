@@ -722,4 +722,9 @@ p {
     margin-bottom: 20px;
 }
 
-
+.calibrapy h5 {
+    font-size: 15px;
+}
+.calibrapy p {
+    font-size: 14px;
+}
