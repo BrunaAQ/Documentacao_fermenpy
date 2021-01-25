@@ -87,21 +87,25 @@
                             </ul>
                         </li>
                         <li class ="nav-item active"> <a class = "nav-link" href = "tutorial.html"> TUTORIAIS </a> 
-                            <ul>
+                             <ul>
                                 <li class = "nav-item">
                                     <a class = "nav-link active" href = "#calibrapy"> CALIBRAPY </a> </li> 
                                 <li class = "nav-item">
-                                    <a class = "nav-link active" href = "#fermenpy"> FERMENPY </a> </li>   
+                                    <a class = "nav-link active" href = "#fermenpy"> FERMENPY </a> </li> 
+                                <li class = "nav-item">
+                                    <a class = "nav-link active" href = "#fermenpy_baI"> FERMENPY BA-I </a> </li>  
+                                <li class = "nav-item">
+                                    <a class = "nav-link active" href = "#continuo"> QUIMIOSTATO </a> </li>  
                             </ul>
                         </li>
                         <li class ="nav-item active"> <a class = "nav-link" href = "covid.html"> ADICIONAIS </a> </li>
-                        <li class ="nav-item active"> <a class = "nav-link" href = "https://brunaaq.github.io/Documentacao_fermenpy/#contatos"> CONTATOS </a> </li>    
+                        <li class ="nav-item active"> <a class = "nav-link" href = "index.html #contatos"> CONTATOS </a> </li>    
                     </ul>
                 </div>
             </nav>  
         </nav>
 
-       <section>
+        <section>
             <div class = "container-fluid tut_descricao text-left margin_tut_descricao border_tut_descricao">
                 <h5> 
                 Material guia suporte para correto e total consumo das interfaces <i> (softwares) </i> 
@@ -133,7 +137,7 @@
                     Construção de curvas de calibração que correlacionam linearmente valores de concentração 
                     celular (Cx) e de Densidade Óptica (D.O.), garantindo a quantificação de biomassa envolvida
                     em bioprocessos. </p> </h6>  
-                <p> <b> <h5> Link para <i>download</i> do programa na extensão executável (.<i>exe</i>) e de documentos modelo para sua alimentação: 
+                <p> <b> <h5> Link para <i>download</i> do programa na extensão executável (.<i>exe</i>) e de documentos para sua alimentação: 
                 <a href = "https://drive.google.com/drive/folders/1wNo_5EqgwegAS-gMlpide8uArfKBc-U1"
                 target = "_blank"> 
                 <br/>
@@ -286,7 +290,7 @@
                     projetado através de ferramentas de <i> Front End </i> disponibilizadas pela biblioteca
                     Tkinter e conta com uma divisão em três seções distintas para melhor permitir a sua
                     exploração. Implementa as bibliotecas gráfica, numérica, de tratamento de dados e de
-                    exploração de arquivos adotadas na construção algorítmica do <i>software</i> Calibrapy.
+                    exploração de arquivos adotadas na construção algoritmica do <i>software</i> Calibrapy.
                     <div class = "container video margin_video">
                         <center>
                             <video video width="700"  controls="controls" 
@@ -384,7 +388,7 @@
                         <br/>
                         <center>
                             <br/>
-                            <img src="img/Saidas_fermenpy_modelagem.png" width = 900px ALT = HTML>
+                            <img src="img/Saidas_fermenpy_modelagem.png" width = 1010px ALT = HTML>
                         </center> 
                         <div class = "container legenda text-center">
                             <p><b>
@@ -403,8 +407,8 @@
                         <br/>
                         <b>Seção 3) Documentação:</b> Esta área foi reservada à disposição de informações
                         técnicas e teóricas sucintas, porém suficientes, para a localização do usuário leitor
-                        frente aos conceitos implementados na construção da interface. Cada uma das subseções aqui
-                        dispostas direcionam automaticamente às correspondentes deste <i>site</i>, desde
+                        frente aos conceitos implemetados na construção da interface. Cada uma das subseções aqui
+                        dispostas direcionam automaticamente às correspondentes deste site <i>site</i>, desde
                         que o computador tenha possibilidade de acesso à rede de internet. 
                         <center>
                             <br/>
@@ -413,9 +417,63 @@
                     <div/>
                 </h6>   
             </div>
-    </section>
+        </section>
 
-    
+        <section id="fermenpy_baI">
+            <div class = "container fermenpy margin_fermenpy border_fermenpy">
+                <h4> <i> <b>  Fermenpy BA-I </b> </i> </h4>
+                <h6><b>Funcionalidade: </b> Simulação e modelagem de bioprocessos fermentativos
+                        microbianos operando em batelada alimentada, frente a diferentes perfis de
+                        alimentação, em função do tempo de cultivo, de substrato ao sistema.</h6>
+                <div class = "container video margin_video">
+                    <center>
+                        <video video width="700"  controls="controls" 
+                        <source src="video/Fermenpy_baI_demonstracao.mp4" type="video/mp4">
+                        <object data="" width="700" >
+                        <embed width="700"  src="Fermenpy_baI_demonstracao.mp4">
+                        </object>
+                        </video>
+                    </center>
+                </div>
+                <h6>
+                    ATENÇÃO!! As especificações são as mesmas que aquelas descritas para a aplicação Fermenpy, porém
+                    agora aplicadas a processos fermentativos microbianos com culturas em batelada alimentada
+                    (bioprocessos compostos pelas etapas de batelada e alimentação).
+                </br>
+                </br>
+                    <b> OBS: É necessário alimentar o sistema com as variáveis cinéticas e operacionais
+                        associadas a cada um dos perfis temporais de alimentação selecionados, tanto para
+                        a etapa de simulação quanto a de modelagem. </b>
+                </h6>
+                <center>
+                    <br/>
+                    <img src="img/entrada_dados_fermenpy_ba_I.PNG" width = 900px height = 420px ALT = HTML>
+                </center> 
+                
+            </div>
+        </section>
+
+        <section id="continuo">
+            <div class = "container fermenpy margin_fermenpy border_fermenpy">
+                <h4> <b> <i>  Script Modo Contínuo </b> </i> </h4>
+                <h6><b>Funcionalidade: </b> Simulação bioprocessos fermentativos
+                        microbianos operando com culturas contínuas em fermentadores do tipo Quimiostato
+                        considerando entrada apenas de substrato e saída de caldo fermentado à taxa constante.</h6>
+                <div class = "container video margin_video">
+                    <center>
+                        <video video width="700"  controls="controls" 
+                        <source src="video/Script_quimiostato_demonstracao.mp4" type="video/mp4">
+                        <object data="" width="700" >
+                        <embed width="700"  src="video/Script_quimiostato_demonstracao.mp4">
+                        </object>
+                        </video>
+                    </center>
+                </div>
+                <h6>
+                    ATENÇÃO!! SEÇÃO AINDA EM ELABORAÇÃO, CONTENDO UMA PRÉVIA DO QUE VEM POR AÍ
+                </h6>  
+            </div>
+        </section>
 
 
         <footer>
@@ -440,6 +498,7 @@
                         </div>
                     </div>
                 </div>
+            <h6> <b> Última atualização em 12/06/2020 14:09 </b> </h6>
             </div>
         </footer>
 
