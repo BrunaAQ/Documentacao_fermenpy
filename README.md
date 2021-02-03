@@ -6,7 +6,7 @@
 #### Tecnologias envolvidas:
 * 💡 HTML5 (estruturação básica);
 * 🎨 CSS3 (estilização dos elementos constituintes de exibição ao usuário);
-    * 🟣 BOOTSTRAP (<i>framework de auxílio e facilitação à criação de estilo)
+    * 🟣 BOOTSTRAP (<i>framework</i> de auxílio e facilitação à criação de estilo)
 
 
 ##### 🖱️ ___Link para acesso:___ https://brunaaq.github.io/Documentacao_fermenpy/
