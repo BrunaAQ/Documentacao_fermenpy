@@ -1,4 +1,5 @@
-###                                                   🔬💻 Projeto de pesquisa Iniciação Científica N°2019/24737-9 🧫🦠
+##                                                      🔬💻 Projeto de pesquisa Iniciação Científica N°2019/24737-9 🧫🦠
+
                                                                                         
 #### 🎯 Repositório destinado à hospedagem de todos os arquivos envolvidos no desenvolvimento de página <i>web</i> que carrega toda a documentação contemplada pelo projeto        desenvolvido até o momento
 
